@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "RFP-iOS-SDK"
-  s.version      = "2.5.0"
+  s.version      = "2.5.1"
   s.summary      = "RFP SDK for iOS"
-  s.homepage     = "https://github.com/fout/RFP-iOS-SDK/wiki"
+  s.homepage     = "https://github.com/fout/RFP-iOS-SDK"
   s.license      = {
     :type => 'Commercial',
     :text => <<-LICENSE
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   }
   s.vendored_frameworks = 'RFP.framework'
 
-  s.frameworks = 'StoreKit'
+  s.frameworks = 'AdSupport'
   s.compiler_flags = '-ObjC'
   s.requires_arc = true
 end
