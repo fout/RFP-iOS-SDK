@@ -23,5 +23,6 @@ github "fout/RFP-iOS-SDK" ~> 2.5.0
 Run `carthage update `to build the framework and link against `RFP.framework`.
 
 
-See the wiki pages for more info.
+## Docs
+- [RFP-iOS-SDK Docs](https://fout.github.io/RFP-iOS-SDK/)
 

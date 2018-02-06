@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming Guide on RFP-iOS-SDK Docs</title>
+    <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/</link>
+    <description>Recent content in Programming Guide on RFP-iOS-SDK Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    
+	<atom:link href="https://fout.github.io/RFP-iOS-SDK/en/programming-guide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_1/</guid>
+      <description>Acquiring the Media Id Initialization within the code  This guide summarizes SDK usage.
+For the detailed API specification, see the comments in each header file within the framework.
+
+Acquisition of Media Id Register from the management screen to issue the Media Id.
+(At the current stage, inquiries should be made to the representative)
+This Media ID uses the app identification, so be sure not to forget this.</description>
+    </item>
+    
+    <item>
+      <title>Acquisition of advertising framework Id</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_2/</guid>
+      <description>Currently, you should contact our representative regarding advertisement framework registration settings.
+The advertisement framework ID is issued from the management screen. When the following information is set, the advertisement framework ID is output.
+ Advertisement framework name Advertisement image size
+ Advertisement format(necessary only for simple In-Feed advertisements described later)
+ Number of advertisement cases
+ Advertisement position array
+ HTML, width, height (necessary only when selecting the format to depict on WebView)</description>
+    </item>
+    
+    <item>
+      <title>Simple infeed advertising</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_3/</guid>
+      <description>Simple In-Feed advertisement display Acquiring events when displaying simple In-Feed advertisements Additional loading of simple In-Feed advertisements Simple In-Feed advertisement format Points to note when using simple In-Feed advertisements  A precondition for simple In-Feedadvertisements is use of UITableView.
+For other uses, use Customized In-Feed advertisements.
+
+Displaying simple In-Feed advertisements The necessary files for displaying In-Feed advertisements are as follows.
+RFPInstreamAdLoader.h  The abovementioned files are used in the following implementations to load In-Feed advertisements.</description>
+    </item>
+    
+    <item>
+      <title>Customized infeed advertising</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_4/</guid>
+      <description>Loading customized In-Feed advertisements Displaying customized In-Feed advertisements Notifying impressions of customized In-Feed advertisements Transition processing when clicking customized In-Feed advertisements Acquiring display characters for customized In-Feed advertisement button Loading customized In-Feed advertisements and acquiring events at the time of each notification Customized In-Feed advertisement parameters Arbitrary use of advertisement formats provided as default by SDK Acquiring exceptions occurring within SDK  When you want to display with more flexibility than with simple In-Feed advertisements, you can use customized In-Feed advertisement functions.</description>
+    </item>
+    
+    <item>
+      <title>Support for video advertising</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_5/</guid>
+      <description>※ Currently video advertisements can only be used by limited partners
+ Components provided in the video advertising SDK Video advertisement judgment Used with video advertising Delegate method Acquiring video advertisements Playback preparation complete Playing videos Setting the cache  
+Components provided with the video advertisement SDK RFPPlayerControl: this is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</description>
+    </item>
+    
+  </channel>
+</rss>

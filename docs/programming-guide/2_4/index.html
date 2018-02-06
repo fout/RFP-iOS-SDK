@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.34" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
+
+    <title>カスタムインフィード広告 :: RFP-iOS-SDK Docs</title>
+    
+    
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1517887319" rel="stylesheet">
+    
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1517887319" rel="stylesheet">
+    
+
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1517887319"></script>
+    
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{ 
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/RFP-iOS-SDK/programming-guide/2_4/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://fout.github.io/RFP-iOS-SDK/ja">
+    RFP-iOS-SDK Docs
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="検索">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1517887319"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1517887319"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/RFP-iOS-SDK\/";
+    
+</script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1517887319"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/installation-guide/" title="インストールガイド" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/installation-guide/">
+          <b>1. </b>インストールガイド
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/programming-guide/" title="プログラミングガイド" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/programming-guide/">
+          <b>2. </b>プログラミングガイド
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_1/" title="はじめに" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_1/">
+        はじめに
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_2/" title="広告枠IDの取得" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_2/">
+        広告枠IDの取得
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_3/" title="簡易版インフィード広告" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_3/">
+        簡易版インフィード広告
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_4/" title="カスタムインフィード広告" class="dd-item active">
+        <a href="/RFP-iOS-SDK/programming-guide/2_4/">
+        カスタムインフィード広告
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_5/" title="動画広告への対応" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_5/">
+        動画広告への対応
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/faq/">
+          <b>3. </b>FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/changelog/" title="CHANGELOG" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/changelog/">
+          <b>4. </b>CHANGELOG
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/fout/RFP-iOS-SDK"><i class='fa fa-fw fa-github'></i> Github repo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fa fa-fw fa-language"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_4/" selected>日本語</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_4/">English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+       
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Docs are generated by using <a href="http://gohugo.io/">Hugo</a>.</p>
+<p>Theme provided by <a href="https://github.com/matcornic/hugo-theme-learn/">hugo-theme-learn</a>.</p>
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/RFP-iOS-SDK/'>TOP</a> > <a href='/RFP-iOS-SDK/programming-guide/'>プログラミングガイド</a> > カスタムインフィード広告
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#カスタムインフィード広告のロード">カスタムインフィード広告のロード</a></li>
+<li><a href="#カスタムインフィード広告の表示">カスタムインフィード広告の表示</a></li>
+<li><a href="#カスタムインフィード広告のインプレッション通知">カスタムインフィード広告のインプレッション通知</a></li>
+<li><a href="#カスタムインフィード広告のクリック時の遷移処理">カスタムインフィード広告のクリック時の遷移処理</a></li>
+<li><a href="#カスタムインフィード広告のボタン表記文字取得">カスタムインフィード広告のボタン表記文字取得</a></li>
+<li><a href="#カスタムインフィード広告のロードと各種通知時のイベント取得">カスタムインフィード広告のロードと各種通知時のイベント取得</a></li>
+<li><a href="#カスタムインフィード広告パラメータ">カスタムインフィード広告パラメータ</a></li>
+<li><a href="#sdkがデフォルトで提供する広告フォーマットの任意利用">SDKがデフォルトで提供する広告フォーマットの任意利用</a></li>
+<li><a href="#sdk内で発生した例外の取得">SDK内で発生した例外の取得</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>カスタムインフィード広告</h1>
+          
+
+        
+
+
+
+
+<ul>
+<li><a href="#infeed/custom/load">カスタムインフィード広告のロード</a></li>
+<li><a href="#infeed/custom/display">カスタムインフィード広告の表示</a></li>
+<li><a href="#infeed/custom/imp">カスタムインフィード広告のインプレッション通知</a></li>
+<li><a href="#infeed/custom/click">カスタムインフィード広告のクリック時の遷移処理</a></li>
+<li><a href="#infeed/custom/ctatext">カスタムインフィード広告のボタン表記文字取得</a></li>
+<li><a href="#infeed/custom/event">カスタムインフィード広告のロードと各種通知時のイベント取得</a></li>
+<li><a href="#infeed/custom/param">カスタムインフィード広告パラメータ</a></li>
+<li><a href="#infeed/custom/format">SDKがデフォルトで提供する広告フォーマットの任意利用</a></li>
+<li><a href="#infeed/custom/exception">SDK内で発生した例外の取得</a></li>
+</ul>
+
+<p>簡易版インフィード広告よりも柔軟な表示を行いたい場合などに、カスタム型のインフィード広告機能を利用することが出来ます。</p>
+
+<p>実装する際には広告箇所が広告であることをユーザーが視認・理解できる文言を必ず記述して下さい。</p>
+
+<p>（例:「PR」・「Sponsored」・「Ad」・「広告」）</p>
+
+<ul>
+<li>パラメータ<code>displayedAdvertiser</code>を使うことで広告ごとに適切な文言を表示することが出来ます。</li>
+</ul>
+
+<p>下記のガイドでは、<code>UITableView</code>を前提とした例を示しますが、<code>UIView</code>などその他の場合でも利用が可能です。</p>
+
+<p><a name="infeed/custom/load"></a></p>
+
+<h3 id="カスタムインフィード広告のロード">カスタムインフィード広告のロード</h3>
+
+<p>In-Feed広告のロードに必要なファイルは以下です。</p>
+
+<pre><code class="language-objc">RFPInstreamAdLoader.h
+RFPInstreamInfoModel.h
+</code></pre>
+
+<p>上記ファイルを用いて以下の様に実装し、In-Feed広告をロードします。</p>
+
+<pre><code class="language-objc">
+//(1) ヘッダーをインポート
+#import &lt;RFP/RFPInstreamAdLoader.h&gt;
+#import &lt;RFP/RFPInstreamInfoModel.h&gt;
+
+@interface YourViewController ()&lt;RFPInstreamAdLoaderDelegate&gt;
+//(2) プロパティを定義
+@property(nonatomic) RFPInstreamAdLoader *instreamAdLoader;
+@end
+
+@implementation YourViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    //(3) RFPInstreamAdLoader をインスタンス化。delegate を設定
+    self.instreamAdLoader = [RFPInstreamAdLoader new];
+    self.instreamAdLoader.delegate = self;
+
+    //(4) In-Feed広告ロードを呼び出し
+    [self.instreamAdLoader rfpLoadAdWithReturn:@&quot;XXXXXXXX&quot; adCount:6 positions:@[@3,@6,@9,@12,@15,@18]];
+}
+
+//(5) In-Feed広告ロードの完了
+- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
+                                  instreamInfoModels:(NSArray*)instreamInfoModels
+{
+	//(6) In-Feed広告情報を受け取る
+    for (RFPInstreamInfoModel *info in instreamInfoModels) {
+        [_items insertObject:info atIndex:[info.position integerValue]];
+    }
+	//(7) 表示を更新する
+    [self.tableView reloadData];
+}
+
+</code></pre>
+
+<p>上記のように実装する事で、In-Feed広告をロードする事が出来ます。</p>
+
+<p><a name="infeed/custom/display"></a></p>
+
+<h3 id="カスタムインフィード広告の表示">カスタムインフィード広告の表示</h3>
+
+<p><code>RFPInstreamInfoModel.h</code>から取り出した情報をもとに、広告を表示させます。<code>position</code>は、広告の成果分析に使われるため、画面内の位置を決める参考にしてください。</p>
+
+<pre><code class="language-objc">
+	if (infoModel.title) {
+        self.adNameLabel.text = infoModel.title;
+    }
+
+    if (infoModel.content) {
+        self.adTextLabel.text = infoModel.content;
+    }
+
+    if (0 &lt; [infoModel.displayedAdvertiser length]) {
+        self.adIndicatorLabel.text = infoModel.displayedAdvertiser;
+    } else {
+        self.adIndicatorLabel.text = @&quot;PR&quot;;
+    }
+
+    [infoModel rfpLoadIconImage:self.adIconImageView completion:^(NSError *iconImageLoadError) {
+        [infoModel rfpLoadImage:self.adImageView completion:^(NSError *imageLoadError) {
+            if (iconImageLoadError || imageLoadError) {
+                NSLog(@&quot;error&quot;);
+            } else {
+                NSLog(@&quot;ok, start sending an impression log&quot;);
+			     [self.instreamAdLoader rfpMeasureImp:infoModel];
+            }
+        }];
+    }];
+
+</code></pre>
+
+<p><a name="infeed/custom/imp"></a></p>
+
+<h3 id="カスタムインフィード広告のインプレッション通知">カスタムインフィード広告のインプレッション通知</h3>
+
+<p>広告の表示が完了したら、インプレッションを通知してください。
+<code>RFPInstreamAdLoader.h</code>の<code>rfpMeasureImp:</code>を呼び出してください。</p>
+
+<p><a name="infeed/custom/click"></a></p>
+
+<h3 id="カスタムインフィード広告のクリック時の遷移処理">カスタムインフィード広告のクリック時の遷移処理</h3>
+
+<p>広告がクリックされたら、以下のメソッドを呼び出すことで、適切にユーザーを遷移させることができます。
+<code>RFPInstreamAdLoader.h</code>の<code>rfpSendClickEvent:</code>を呼び出してください。</p>
+
+<p><a name="infeed/custom/ctatext"></a></p>
+
+<h3 id="カスタムインフィード広告のボタン表記文字取得">カスタムインフィード広告のボタン表記文字取得</h3>
+
+<p>管理画面から設定したボタン表記文字(ユーザーアクション)については<code>RFPInstreamInfoModel.h</code>の<code>getCtaText</code>を利用して取得します。</p>
+
+<pre><code class="language-objc">- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
+                                     instreamInfoModels:(NSArray *)instreamInfoModels {
+    for (RFPInstreamInfoModel *info in instreamInfoModels) {
+        if ([info isVideo]) {
+            // ボタン表記文字の取得 &quot;詳細はこちら&quot;,&quot;予約する&quot;,&quot;購入する&quot;,&quot;登録する&quot; ....
+            NSLog(@&quot;Button Name=[%@]&quot;, [info getCtaText]);
+        }
+    }
+}
+</code></pre>
+
+<p><a name="infeed/custom/event"></a></p>
+
+<h3 id="カスタムインフィード広告のロードと各種通知時のイベント取得">カスタムインフィード広告のロードと各種通知時のイベント取得</h3>
+
+<p>In-Feed広告のロードや各種通知をする際に、そのイベントを受け取りたい場合があります。</p>
+
+<p>その場合は <code>RFPInstreamAdLoader</code> のプロパティである delegate が、<code>RFPInstreamAdLoaderDelegate</code> に準拠しているので、それ経由で受信する事が出来ます。</p>
+
+<pre><code class="language-objc">- (void)viewDidLoad
+{
+    //(1) delegate を設定
+    self.instreamAdLoader.delegate = self;
+}
+
+//(2)広告のロード開始時
+- (void)rfpInstreamAdLoaderDidStartLoadingAd:(RFPInstreamAdLoader *)instreamAdLoader
+{
+}
+
+//(3)広告のロード完了時
+- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
+                                  instreamInfoModels:(NSArray*)instreamInfoModels
+{
+}
+
+//(4)広告のインプレッション通知完了時
+- (void)rfpInstreamAdLoaderDidFinishSendingAdImp
+{
+}
+
+//(5)広告のクリック処理完了時
+- (void)rfpInstreamAdLoaderDidFinishSendingAdClick
+{
+}
+
+//(6)広告のロード失敗時
+- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToLoadAdWithError:(NSError *)error
+{
+}
+
+//(7)広告のインプレッション通知失敗時
+- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToSendImpWithError:(NSError *)error
+{
+}
+
+//(8)広告のクリック処理失敗時
+- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToSendClickWithError:(NSError *)error
+{
+}
+
+//(9)動画広告の再生準備完了
+- (void) readyToPlayWithPlayerControl:(RFPPlayerControl *)playerControl
+{
+}
+
+// (※)動画広告再生時に必須
+- (UIViewController *)viewControllerForPresentingModalView
+{
+    return self;
+}
+</code></pre>
+
+<p><a name="infeed/custom/param"></a></p>
+
+<h3 id="カスタムインフィード広告パラメータ">カスタムインフィード広告パラメータ</h3>
+
+<p><code>RFPInstreamInfoModel.h</code>を合わせて参照ください。</p>
+
+<table>
+<thead>
+<tr>
+<th>パラメータ名</th>
+<th>説明</th>
+<th>例</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>title</td>
+<td>タイトル文言(全角20文字以内)</td>
+<td><code>TestAd</code></td>
+</tr>
+
+<tr>
+<td>content</td>
+<td>説明・紹介文(全角40~70文字以内)</td>
+<td><code>テスト広告です。</code></td>
+</tr>
+
+<tr>
+<td>position</td>
+<td>広告案件の 相対位置</td>
+<td><code>3</code></td>
+</tr>
+
+<tr>
+<td>displayedAdvertiser</td>
+<td>表記広告主名</td>
+<td><code>飲料会社 A社</code></td>
+</tr>
+
+<tr>
+<td>iconImageURL</td>
+<td>アイコン型の正方形画像(114x114 pixel固定)リソース</td>
+<td>NSURL オブジェクトです</td>
+</tr>
+
+<tr>
+<td>mainImageURL</td>
+<td>バナー型の矩形画像(広告枠IDごとにサイズ可変)リソース</td>
+<td>NSURL オブジェクトです</td>
+</tr>
+
+<tr>
+<td>adId</td>
+<td>広告ID</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>アイコン型の正方形画像とバナー型の矩形画像は次のメソッドを使っても取得することができます。このメソッドは内部的に画像をキャッシュしてくれるため、利用を推奨します。
+
+<ul>
+<li><code>- (void)rfpLoadIconImage:(UIImageView*)iconImageView completion:(void (^)(NSError *error)) completion;</code></li>
+<li><code>- (void)rfpLoadImage:(UIImageView*)imageView completion:(void (^)(NSError *error)) completion;</code></li>
+</ul></li>
+<li><code>説明・紹介文</code> は <code>content</code> プロパティです。NSObject の <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/index.html#//apple_ref/occ/clm/NSObject/description">description</a> メソッドではありません。ご注意ください。</li>
+<li>広告IDの取得はRFPInstreamInfoModelのgetAdIdをご利用ください。</li>
+</ul>
+
+<p><a name="infeed/custom/format"></a></p>
+
+<h3 id="sdkがデフォルトで提供する広告フォーマットの任意利用">SDKがデフォルトで提供する広告フォーマットの任意利用</h3>
+
+<p>現状、7つの広告フォーマットを自由に利用できます。<code>UITableViewCell</code>のサブクラスです。</p>
+
+<p>デフォルト広告フォーマットの利用に必要なファイルは以下です。</p>
+
+<pre><code>RFPInstreamAdCellThumbnailMiddle.h
+RFPInstreamAdCellThumbnailSmall.h
+RFPInstreamAdCellLandscapePhoto.h
+RFPInstreamAdCellPhotoBottom.h
+RFPInstreamAdCellPhotoMiddle.h
+RFPInstreamAdCellTextOnly.h
+RFPInstreamAdCellWebView.h
+のうち、利用するフォーマットのものを選択する
+</code></pre>
+
+<p><a href="../2_3/#infeed/simple/format">簡易版インフィード広告から利用できるフォーマット</a>を利用することができます。</p>
+
+<p>上記ファイル を用いて以下の様に実装し、デフォルト広告フォーマットを表示します。</p>
+
+<pre><code class="language-objc">//(1) 利用したいヘッダーをインポート
+#import &lt;RFP/RFPInstreamAdCellThumbnailMiddle.h&gt;
+
+- (void)viewDidLoad
+{
+	//(2) 利用したい広告フォーマットのクラスを事前に登録する
+    [self.tableView registerClass:[RFPInstreamAdCellThumbnailMiddle class] forCellReuseIdentifier:@&quot;RFPInstreamAdCellThumbnailMiddle&quot;];
+	...
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// 広告枠かどうかの判定は、媒体様実装
+    BOOL isAd = [self isAdCellAt:indexPath];
+    if (isAd) {
+        RFPInstreamInfoModel *adItem = (RFPInstreamInfoModel*)_items[indexPath.row];
+
+		//(3) 事前に登録した広告フォーマットのクラスを取り出す
+	    UITableViewCell&lt;RFPInstreamAdCellProtocol&gt; *cell = [tableView dequeueReusableCellWithIdentifier:@&quot;RFPInstreamAdCellThumbnailMiddle&quot; forIndexPath:indexPath];
+
+		//(4) ロードした広告の情報をもとにセルを描画する
+	    [cell updateCell:adItem completion:^(NSError *error) {
+
+			//(5) 描画が完了後、インプレッションログを送信する
+    	    [self.instreamAdLoader rfpMeasureImp:adItem];
+	    }];
+
+    	return cell;
+    }
+
+    ...
+}
+</code></pre>
+
+<p><a name="infeed/custom/exception"></a></p>
+
+<h3 id="sdk内で発生した例外の取得">SDK内で発生した例外の取得</h3>
+
+<p><code>RFPExceptionDelegate</code>を利用することで、SDK内で発生した例外内容を取得することができます。</p>
+
+<pre><code>@interface MyViewController () &lt;RFPInstreamAdLoaderDelegate, RFPExceptionDelegate&gt;
+
+@property(nonatomic) RFPInstreamAdLoader *adLoader;
+
+@end
+
+@implementation MyViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.adLoader = [RFPInstreamAdLoader new];
+    self.adLoader.delegate = self;
+    self.adLoader.exceptionDelegate = self; // delegate設定
+    [self.adLoader rfpLoadAdWithReturn:@&quot;adSpotId&quot;
+                               adCount:1
+                             positions:@[@3]];
+}
+
+// 例外内容取得Delegate
+- (void)exceptionOccurred:(NSError *)error {
+    NSLog(@&quot;exception=[%@]&quot;, error);
+}
+
+@end
+</code></pre>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/programming-guide/2_3/" title="簡易版インフィード広告"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/RFP-iOS-SDK/programming-guide/2_5/" title="動画広告への対応" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1517887319"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1517887319"></script>
+
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1517887319" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1517887319"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

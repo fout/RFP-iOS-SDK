@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.34" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
+
+    <title>Simple infeed advertising :: RFP-iOS-SDK Docs</title>
+    
+    
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1517887319" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1517887319" rel="stylesheet">
+    
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1517887319" rel="stylesheet">
+    
+
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1517887319"></script>
+    
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{ 
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/RFP-iOS-SDK/en/programming-guide/2_3/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://fout.github.io/RFP-iOS-SDK/en">
+    RFP-iOS-SDK Docs
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1517887319"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1517887319"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/RFP-iOS-SDK\/en";
+    
+</script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1517887319"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/installation-guide/" title="Installation Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/installation-guide/">
+          <b>1. </b>Installation Guide
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/" title="Programming Guide" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/programming-guide/">
+          <b>2. </b>Programming Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_1/" title="Introduction" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_1/">
+        Introduction
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_2/" title="Acquisition of advertising framework Id" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_2/">
+        Acquisition of advertising framework Id
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_3/" title="Simple infeed advertising" class="dd-item active">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_3/">
+        Simple infeed advertising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized infeed advertising" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_4/">
+        Customized infeed advertising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_5/" title="Support for video advertising" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_5/">
+        Support for video advertising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/faq/">
+          <b>3. </b>FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/changelog/" title="CHANGELOG" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/changelog/">
+          <b>4. </b>CHANGELOG
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/fout/RFP-iOS-SDK"><i class='fa fa-fw fa-github'></i> Github repo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fa fa-fw fa-language"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_3/">日本語</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_3/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+       
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Docs are generated by using <a href="http://gohugo.io/">Hugo</a>.</p>
+<p>Theme provided by <a href="https://github.com/matcornic/hugo-theme-learn/">hugo-theme-learn</a>.</p>
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/RFP-iOS-SDK/en/'>TOP</a> > <a href='/RFP-iOS-SDK/en/programming-guide/'>Programming Guide</a> > Simple infeed advertising
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#displaying-simple-in-feed-advertisements">Displaying simple In-Feed advertisements</a></li>
+<li><a href="#acquisition-of-events-when-displaying-simple-in-feed-advertisements">Acquisition of events when displaying simple In-Feed advertisements</a></li>
+<li><a href="#additional-loading-of-simple-in-feed-advertisements">Additional loading of simple In-Feed advertisements</a></li>
+<li><a href="#simple-in-feed-advertisement-format">Simple In-Feed advertisement format</a></li>
+<li><a href="#points-to-note-when-using-simple-in-feed-advertisements">Points to note when using simple In-Feed advertisements</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Simple infeed advertising</h1>
+          
+
+        
+
+
+
+
+<ul>
+<li><a href="#infeed/simple/display">Simple In-Feed advertisement display</a></li>
+<li><a href="#infeed/simple/event">Acquiring events when displaying simple In-Feed advertisements</a></li>
+<li><a href="#infeed/simple/additional_load">Additional loading of simple In-Feed advertisements</a></li>
+<li><a href="#infeed/simple/format">Simple In-Feed advertisement format</a></li>
+<li><a href="#infeed/simple/caution">Points to note when using simple In-Feed advertisements</a></li>
+</ul>
+
+<p>A precondition for simple In-Feedadvertisements is use of <code>UITableView</code>.</p>
+
+<p>For other uses, use <a href="../2_4">Customized In-Feed advertisements</a>.</p>
+
+<p><a name="infeed/simple/display"></a></p>
+
+<h3 id="displaying-simple-in-feed-advertisements">Displaying simple In-Feed advertisements</h3>
+
+<p>The necessary files for displaying In-Feed advertisements are as follows.</p>
+
+<pre><code>RFPInstreamAdLoader.h
+</code></pre>
+
+<p>The abovementioned files are used in the following implementations to load In-Feed advertisements.</p>
+
+<pre><code class="language-objc">
+//(1) Import the headers
+#import &lt;RFP/RFPInstreamAdLoader.h&gt;
+
+@interface YourViewController ()
+//(2) Define properties
+@property(nonatomic) RFPInstreamAdLoader *instreamAdLoader;
+@end
+
+@implementation YourViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    //(3) Create instances of RFPInstreamAdLoader. Set delegate
+    self.instreamAdLoader = [RFPInstreamAdLoader new];
+    self.instreamAdLoader.delegate = self;
+
+    //(4) Set the tableView and framework ID for which you wish to insert the In-Feed advertisements
+    [self.instreamAdLoader rfpBindToTableView:self.tableView adSpotId:@&quot;XXXXXXXX&quot;];
+
+    // Wait for completion of acquisition of data media
+    ...
+
+    //(5) Call In-Feed advertisement loading
+    [self.instreamAdLoader rfpLoadAd];
+}
+
+</code></pre>
+
+<p>By following the aforementioned steps, In-Feed advertisements may be displayed.
+There is no need to call <code>[your_tableView reloadData]</code>. If it is necessary to call <code>[your_tableView reloadData]</code>, call <code>[self.instreamAdLoader rfpReloadData];</code>.</p>
+
+<p>The number of advertisement cases and the advertisement position array per request can be controlled using APIs, such as <code>[self.instreamAdLoader rfpLoadAd:6 positions:@[@2,@4,@6,@8,@10,@12]];</code> etc.</p>
+
+<p><a name="infeed/simple/event"></a></p>
+
+<h3 id="acquisition-of-events-when-displaying-simple-in-feed-advertisements">Acquisition of events when displaying simple In-Feed advertisements</h3>
+
+<p>When displaying In-Feed advertisements, you may choose to receive these events.</p>
+
+<p>In this case, since the <code>RFPInstreamAdLoader</code> property delegate conforms to <code>RFPInstreamAdLoaderDelegate</code>, it may be received via <code>RFPInstreamAdLoaderDelegate</code></p>
+
+<pre><code class="language-objc">- (void)viewDidLoad
+{
+    //(1) Set delegate
+    self.instreamAdLoader.delegate = self;
+}
+
+//(2) When starting advertisement loading
+- (void)rfpInstreamAdLoaderDidStartLoadingAd:(RFPInstreamAdLoader *)instreamAdLoader
+{
+}
+
+//(3) When completing advertisement loading
+- (void)rfpInstreamAdLoaderDidFinishLoadingAd:(RFPInstreamAdLoader *)instreamAdLoader
+{
+}
+
+//(4) When completing advertisement View loading
+- (void)rfpInstreamAdLoaderDidFinishLoadingAdImage:(NSIndexPath *)adIndexPath
+{
+}
+
+//(5) When completing advertisement click processing
+- (void)rfpInstreamAdLoaderDidFinishSendingAdClick
+{
+}
+
+//(6) When advertisement loading fails
+- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToLoadAdWithError:(NSError *)error
+{
+}
+
+//(7) When advertisement View loading fails
+- (void)rfpInstreamAdLoader:(NSIndexPath *)adIndexPath didFailToLoadAdImageWithError:(NSError *)error
+{
+}
+
+</code></pre>
+
+<p><a name="infeed/simple/additional_load"></a></p>
+
+<h3 id="additional-loading-of-simple-in-feed-advertisements">Additional loading of simple In-Feed advertisements</h3>
+
+<p>In the case of a UI that loads additional feeds when the user arrives at the bottom of the site, it is possible to provide additional loading of advertisements.</p>
+
+<pre><code class="language-objc">- (void)loadMore
+{
+	// Load additional advertisements and insert them at appropriate positions in the table based on the advertisement position array.
+    [self.instreamAdLoader rfpLoadAd];
+}
+</code></pre>
+
+<p><a name="infeed/simple/format"></a></p>
+
+<h3 id="simple-in-feed-advertisement-format">Simple In-Feed advertisement format</h3>
+
+<p>Currently, seven advertising formats may be used. Settings are <a href="../2_2/">here</a>.</p>
+
+<ul>
+<li>1-1) ThumnailMiddle</li>
+</ul>
+
+<pre><code>    // The format looks like this
+    //  -----------------------------------------------------
+    // |             |  icon + name                          |
+    // |   image     |  ad text                              |
+    // |             |                                       |
+    // |   90x90     |                                       |
+    // |             |                                    PR |
+    //  -----------------------------------------------------
+</code></pre>
+
+<ul>
+<li>1-2) ThumnailSmall</li>
+</ul>
+
+<pre><code>    // The format looks like this
+    //  -----------------------------------------------------
+    // |  -------    icon + name                             |
+    // | | image |   PR                                      |
+    // | | 50x50 |   ad text                                 |
+    // | |       |                                           |
+    // |  -------                                            |
+    //  -----------------------------------------------------
+</code></pre>
+
+<ul>
+<li>1-3) LandscapePhoto</li>
+</ul>
+
+<pre><code>    // The format looks like this
+    //  -----------------------------------------------------
+    // |                                                     |
+    // |                  ad image                           |
+    // |                                                     |
+    // | --------------------------------------------------- |
+    // |  ad text                                            |
+    // |                                                     |
+    // |                                                     |
+    // |                                                 PR  |
+    // |  advertiser icon + name                             |
+    //  -----------------------------------------------------
+</code></pre>
+
+<ul>
+<li>1-4) PhotoBottom</li>
+</ul>
+
+<pre><code>    // The format looks like this
+    //  -----------------------------------------------------
+    // |  advertiser |  advertiser name                      |
+    // |     icon    |  PR                                   |
+    // |             |  ad text                              |
+    // | --------------------------------------------------- |
+    // |                                                     |
+    // |                                                     |
+    // |                   image                             |
+    // |                                                     |
+    //  -----------------------------------------------------
+</code></pre>
+
+<ul>
+<li>1-5) PhotoMiddle</li>
+</ul>
+
+<pre><code>    // The format looks like this
+    //  -----------------------------------------------------
+    // | icon + name                                         |
+    // |                                                  PR |
+    // | --------------------------------------------------- |
+    // |                                                     |
+    // |                                                     |
+    // |                      image                          |
+    // |                                                     |
+    // |                                                     |
+    // |                                                     |
+    // | --------------------------------------------------- |
+    // |  text                                               |
+    //  -----------------------------------------------------
+</code></pre>
+
+<ul>
+<li>1-6) TextOnly</li>
+</ul>
+
+<pre><code>    // The format looks like this
+    //  -----------------------------------------------------
+    // |  icon + name                                        |
+    // |                                                  PR |
+    // | --------------------------------------------------- |
+    // |                                                     |
+    // |             ad text                                 |
+    // |                                                     |
+    // |                                                     |
+    //  -----------------------------------------------------
+</code></pre>
+
+<ul>
+<li>1-7) WebView
+
+<ul>
+<li>By drafting HTML, it is possible to depict this in WebView within the app.</li>
+</ul></li>
+</ul>
+
+<p><a name="infeed/simple/caution"></a></p>
+
+<h3 id="points-to-note-when-using-simple-in-feed-advertisements">Points to note when using simple In-Feed advertisements</h3>
+
+<p>The operation of UITableView passed to <code>- (void)rfpBindToTableView:adSpotId:</code>is only guaranteed when the number of sections is 1.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/programming-guide/2_2/" title="Acquisition of advertising framework Id"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized infeed advertising" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1517887319"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1517887319"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1517887319"></script>
+
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1517887319" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1517887319"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
