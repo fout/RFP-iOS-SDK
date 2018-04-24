@@ -55,5 +55,14 @@
       <description>※ 動画広告は現在限定されたパートナー様のみご利用頂けます 動画広告SDKで提供されるコンポーネント 動画広告の判定 動画広告で利用するDelega</description>
     </item>
     
+    <item>
+      <title>HTTPリクエストのタイムアウト間隔設定</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_6/</guid>
+      <description>HTTPリクエストのタイムアウト間隔設定 HTTPリクエストのタイムアウト間隔の設定 (v2.6.0以上利用可能) rfpSetHttpReque</description>
+    </item>
+    
   </channel>
 </rss>

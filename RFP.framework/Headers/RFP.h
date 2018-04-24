@@ -50,4 +50,18 @@
  */
 + (NSInteger)rfpGetVideoCacheSize;
 
+/**
+ * Set http request timeout interval in seconds
+ * @param timeoutInterval default interval is 15s
+ */
++ (void)rfpSetHttpRequestTimeoutInterval:(CGFloat)timeoutInterval;
+
+/**
+ * Get http request timeout interval (s)
+ * If not setted from 「rfpSetHttpRequestTimeoutInterval],
+ * will return a RFP default value.
+ * @return timeoutInterval (s)
+ */
++ (CGFloat)rfpGetHttpRequestTimeoutInterval;
+
 @end

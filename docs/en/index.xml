@@ -72,5 +72,17 @@ RFPInstreamAdLoader.h  The abovementioned files are used in the following implem
 Components provided with the video advertisement SDK RFPPlayerControl: this is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</description>
     </item>
     
+    <item>
+      <title>Set HTTP request timeout interval</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</guid>
+      <description>Set HTTP request timeout interval  
+Set HTTP request timeout interval (Can be used on v2.6.0 or later)
+Your app can use the rfpSetHttpRequestTimeoutInterval: to set HTTP request&amp;rsquo;s timeout interval in RFP.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { // ※Be sure to set the rfpSetHttpRequestTimeoutInterval before rfpInitMedia [RFP rfpSetHttpRequestTimeoutInterval:15.0f]; //set HTTP request interval to 15s [RFP rfpInitMedia:@&amp;quot;your_media_id&amp;quot;]; // Acquire current setting value CGFloat timeoutInterval = [RFP rfpGetHttpRequestTimeoutInterval]; // .</description>
+    </item>
+    
   </channel>
 </rss>

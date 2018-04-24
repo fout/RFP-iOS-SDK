@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 
-    <title>Tags :: RFP-iOS-SDK Docs</title>
+    <title>HTTPリクエストのタイムアウト間隔設定 :: RFP-iOS-SDK Docs</title>
     
     
     <link href="/RFP-iOS-SDK/css/nucleus.css?1524557028" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/RFP-iOS-SDK/tags/">
+  <body class="" data-url="/RFP-iOS-SDK/programming-guide/2_6/">
     <nav id="sidebar" class="">
 
 
@@ -100,7 +100,7 @@
   
     
     <li data-nav-id="/RFP-iOS-SDK/programming-guide/" title="プログラミングガイド" class="dd-item 
-        
+        parent
         
         
         ">
@@ -219,7 +219,7 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_6/" title="HTTPリクエストのタイムアウト間隔設定" class="dd-item ">
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_6/" title="HTTPリクエストのタイムアウト間隔設定" class="dd-item active">
         <a href="/RFP-iOS-SDK/programming-guide/2_6/">
         HTTPリクエストのタイムアウト間隔設定
         
@@ -318,7 +318,7 @@
                   
                     
                     
-                      <option id="ja" value="/RFP-iOS-SDK/tags/" selected>日本語</option>
+                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_6/" selected>日本語</option>
                     
                   
               
@@ -332,7 +332,7 @@
                   
                     
                     
-                      <option id="en" value="/RFP-iOS-SDK/en/tags/">English</option>
+                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_6/">English</option>
                     
                   
               
@@ -389,7 +389,19 @@
                     
           
           
-            Tags
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/RFP-iOS-SDK/'>TOP</a> > <a href='/RFP-iOS-SDK/programming-guide/'>プログラミングガイド</a> > HTTPリクエストのタイムアウト間隔設定
+          
+         
+          
+         
           
            
                   </span>
@@ -397,7 +409,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#httpリクエストのタイムアウト間隔の設定">HTTPリクエストのタイムアウト間隔の設定</a>
+<ul>
+<li><a href="#タイムアウト間隔設定時の注意点">タイムアウト間隔設定時の注意点</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -409,7 +434,7 @@
         
         <div id="body-inner">
           
-            <h1>Tags</h1>
+            <h1>HTTPリクエストのタイムアウト間隔設定</h1>
           
 
         
@@ -417,9 +442,44 @@
 
 
 
+<ul>
+<li><a href="#timeout">HTTPリクエストのタイムアウト間隔設定</a></li>
+</ul>
+
+<p><a name="timeout"></a></p>
+
+<h3 id="httpリクエストのタイムアウト間隔の設定">HTTPリクエストのタイムアウト間隔の設定</h3>
+
+<p>(<strong>v2.6.0以上利用可能</strong>)</p>
+
+<p><code>rfpSetHttpRequestTimeoutInterval:</code>を利用することで、SDKのHTTPタイムアウト値を設定することが可能です</p>
+
+<pre><code class="language-objc">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // ※ rfpSetHttpRequestTimeoutIntervalは必ずrfpInitMediaの前に設定をしてください
+    [RFP rfpSetHttpRequestTimeoutInterval:15.0f];  //HTTP requestのタイムアウトを15秒にする
+
+    [RFP rfpInitMedia:@&quot;your_media_id&quot;];
+
+    // 現在の設定値を取得
+    CGFloat timeoutInterval = [RFP rfpGetHttpRequestTimeoutInterval];
+    // ...
+}
+</code></pre>
+
+<h4 id="タイムアウト間隔設定時の注意点">タイムアウト間隔設定時の注意点</h4>
+
+<ul>
+<li><p>極めて短い間隔を設定すると広告を取得できない可能性がありますので、使用状況に合わせて設定してください。</p></li>
+
+<li><p>システム最大値を超えた値が設定された場合、システム最大値が適用されます。</p></li>
+</ul>
+
+
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -471,6 +531,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -478,6 +539,25 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -548,6 +628,29 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -577,48 +680,15 @@
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
         
         
 
 
         
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/programming-guide/2_5/" title="動画広告への対応"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/RFP-iOS-SDK/installation-guide/" title="インストールガイド" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+            <a class="nav nav-next" href="/RFP-iOS-SDK/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -648,3 +718,4 @@
 
   </body>
 </html>
+
