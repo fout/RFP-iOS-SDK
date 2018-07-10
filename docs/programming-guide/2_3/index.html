@@ -13,19 +13,19 @@
     <title>簡易版インフィード広告 :: RFP-iOS-SDK Docs</title>
     
     
-    <link href="/RFP-iOS-SDK/css/nucleus.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hybrid.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/auto-complete.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/theme.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1524557028" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1531205135" rel="stylesheet">
     
-      <link href="/RFP-iOS-SDK/css/theme-blue.css?1524557028" rel="stylesheet">
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1531205135" rel="stylesheet">
     
 
-    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1531205135"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1524557028"></script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1524557028"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1531205135"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1531205135"></script>
 <script type="text/javascript">
     
         var baseurl = "\/RFP-iOS-SDK\/";
     
 </script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1524557028"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1531205135"></script>
 
     
   </div>
@@ -459,91 +459,75 @@
 
 <h3 id="簡易版インフィード広告の表示">簡易版インフィード広告の表示</h3>
 
-<p>In-Feed広告の表示に必要なファイルは以下です。</p>
+<p>簡易版インフィード広告の実装例を挙げます。</p>
 
-<pre><code>RFPInstreamAdLoader.h
-</code></pre>
+<pre><code class="language-:swift">class YourViewController: UITableViewController, RFPInstreamAdLoaderDelegate {
 
-<p>上記ファイルを用いて以下の様に実装し、In-Feed広告をロードします。</p>
+    let adSpotId = &quot;your_adspot_id&quot;
+    let adPositions = [3, 5]
+    let instreamAdLoader = RFPInstreamAdLoader.init()
 
-<pre><code class="language-objc">
-//(1) ヘッダーをインポート
-#import &lt;RFP/RFPInstreamAdLoader.h&gt;
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
 
-@interface YourViewController ()
-//(2) プロパティを定義
-@property(nonatomic) RFPInstreamAdLoader *instreamAdLoader;
-@end
+        // インフィード広告を挿入したいtableViewと広告枠IDを設定
+        instreamAdLoader.delegate = self
+        instreamAdLoader.rfpBind(to: tableView, adSpotId: adSpotId)
 
-@implementation YourViewController
+        // インフィード広告ロードを呼び出し
+        instreamAdLoader.rfpLoadAd()
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+        // 位置を指定して呼び出す場合
+        instreamAdLoader.rfpLoadAd(UInt(adPositions.count), positions: adPositions)
+    }
 
-    //(3) RFPInstreamAdLoader をインスタンス化。delegate を設定
-    self.instreamAdLoader = [RFPInstreamAdLoader new];
-    self.instreamAdLoader.delegate = self;
+    //....
 
-    //(4) In-Feed広告を挿入したいtableViewと広告枠IDを設定
-    [self.instreamAdLoader rfpBindToTableView:self.tableView adSpotId:@&quot;XXXXXXXX&quot;];
-
-    // 媒体様のデータ取得完了を待って
-    ...
-
-    //(5) In-Feed広告ロードを呼び出し
-    [self.instreamAdLoader rfpLoadAd];
 }
-
 </code></pre>
 
-<p>上記のように実装する事で、In-Feed広告を表示する事が出来ます。
-<code>[your_tableView reloadData]</code>を呼ぶ必要はありません。<code>[your_tableView reloadData]</code>を呼ぶ必要がある場合は、<code>[self.instreamAdLoader rfpReloadData];</code>を呼んでください。</p>
+<p><code>tableView.reloadData()</code>を呼ぶ必要はありません。<code>tableView.reloadData()</code>を呼ぶ必要がある場合は、<code>instreamAdLoader.rfpReloadData()</code>を呼んでください。</p>
 
-<p>1リクエストあたりの広告案件数と広告位置配列は、<code>[self.instreamAdLoader rfpLoadAd:6 positions:@[@2,@4,@6,@8,@10,@12]];</code>などのAPIを使ってコントロールすることも出来ます。</p>
+<p>1リクエストあたりの広告案件数と広告位置配列は、<code>instreamAdLoader.rfpLoadAd(_:positions:)</code>などのAPIを使ってコントロールすることも出来ます。</p>
 
 <p><a name="infeed/simple/event"></a></p>
 
 <h3 id="簡易版インフィード広告の表示時のイベント取得">簡易版インフィード広告の表示時のイベント取得</h3>
 
-<p>In-Feed広告の表示をする際に、そのイベントを受け取りたい場合があります。</p>
+<p>インフィード広告の表示をする際に、そのイベントを受け取りたい場合があります。</p>
 
 <p>その場合は <code>RFPInstreamAdLoader</code> のプロパティである delegate が、<code>RFPInstreamAdLoaderDelegate</code> に準拠しているので、それ経由で受信する事が出来ます。</p>
 
-<pre><code class="language-objc">- (void)viewDidLoad
-{
-    //(1) delegate を設定
-    self.instreamAdLoader.delegate = self;
+<pre><code class="language-:swift">override func viewDidLoad() {
+    super.viewDidLoad()
+    // (1) delegate を設定
+    instreamAdLoader.delegate = self
 }
 
-//(2)広告のロード開始時
-- (void)rfpInstreamAdLoaderDidStartLoadingAd:(RFPInstreamAdLoader *)instreamAdLoader
-{
+// (2) 広告のロード開始時
+func rfpInstreamAdLoaderDidStartLoadingAd(_ instreamAdLoader: RFPInstreamAdLoader!) {
 }
 
-//(3)広告のロード完了時
-- (void)rfpInstreamAdLoaderDidFinishLoadingAd:(RFPInstreamAdLoader *)instreamAdLoader
-{
+// (3) 広告のロード完了時
+func rfpInstreamAdLoaderDidFinishLoadingAd(_ instreamAdLoader: RFPInstreamAdLoader!) {
 }
 
-//(4)広告Viewのロード完了時
-- (void)rfpInstreamAdLoaderDidFinishLoadingAdImage:(NSIndexPath *)adIndexPath
-{
+// (4) 広告Viewのロード完了時
+func rfpInstreamAdLoaderDidFinishLoadingAdImage(_ adIndexPath: IndexPath!) {
 }
 
-//(5)広告のクリック処理完了時
-- (void)rfpInstreamAdLoaderDidFinishSendingAdClick
-{
+// (5) 広告のクリック処理完了時
+func rfpInstreamAdLoaderDidFinishSendingAdClick() {
 }
 
-//(6)広告のロード失敗時
-- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToLoadAdWithError:(NSError *)error
-{
+// (6) 広告のロード失敗時
+func rfpInstreamAdLoader(_ instreamAdLoader: RFPInstreamAdLoader!, didFailToLoadAdWithError error: Error!) {
 }
 
-//(7)広告Viewのロード失敗時
-- (void)rfpInstreamAdLoader:(NSIndexPath *)adIndexPath didFailToLoadAdImageWithError:(NSError *)error
-{
+// (7) 広告Viewのロード失敗時
+func rfpInstreamAdLoader(_ adIndexPath: IndexPath!, didFailToLoadAdImageWithError error: Error!) {
 }
 
 </code></pre>
@@ -554,10 +538,9 @@
 
 <p>ユーザーがサイト下部に到達した際に追加フィードを読み込むような UI の場合に、追加で広告ロードを行うことも可能です。</p>
 
-<pre><code class="language-objc">- (void)loadMore
-{
-	// 追加の広告をロードして、広告位置配列をもとにテーブル内の適切な位置に挿入します
-    [self.instreamAdLoader rfpLoadAd];
+<pre><code class="language-:swift">func loadMore {
+    // 追加の広告をロードして、広告位置配列をもとにテーブル内の適切な位置に挿入します
+    instreamAdLoader.rfpReloadData()
 }
 </code></pre>
 
@@ -678,7 +661,7 @@
 
 <h3 id="簡易版インフィード広告を使う上での注意点">簡易版インフィード広告を使う上での注意点</h3>
 
-<p><code>- (void)rfpBindToTableView:adSpotId:</code>に渡す<code>UITableView</code>は、section数が1つである場合のみ動作保証されます。</p>
+<p><code>instreamAdLoader.rfpBind(to:adSpotId:)</code>に渡す<code>UITableView</code>は、section数が1つである場合のみ動作保証されます。</p>
 
 
 <footer class=" footline" >
@@ -902,20 +885,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1531205135"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/learn.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1531205135"></script>
 
-    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1524557028" type="text/css" rel="stylesheet" />
-    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1524557028"></script>
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1531205135" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1531205135"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

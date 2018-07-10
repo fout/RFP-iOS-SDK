@@ -13,19 +13,19 @@
     <title>Support for video advertising :: RFP-iOS-SDK Docs</title>
     
     
-    <link href="/RFP-iOS-SDK/css/nucleus.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hybrid.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/auto-complete.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/theme.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1524557028" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1531205135" rel="stylesheet">
     
-      <link href="/RFP-iOS-SDK/css/theme-blue.css?1524557028" rel="stylesheet">
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1531205135" rel="stylesheet">
     
 
-    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1531205135"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1524557028"></script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1524557028"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1531205135"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1531205135"></script>
 <script type="text/javascript">
     
         var baseurl = "\/RFP-iOS-SDK\/en";
     
 </script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1524557028"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1531205135"></script>
 
     
   </div>
@@ -181,9 +181,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized infeed advertising" class="dd-item ">
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising" class="dd-item ">
         <a href="/RFP-iOS-SDK/en/programming-guide/2_4/">
-        Customized infeed advertising
+        Customized In-Feed advertising
         
         </a>
     </li>
@@ -467,13 +467,19 @@
 
 <h3 id="components-provided-with-the-video-advertisement-sdk">Components provided with the video advertisement SDK</h3>
 
-<p><code>RFPPlayerControl</code>: this is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</p>
+<ul>
+<li><code>RFPPlayerControl</code>
+
+<ul>
+<li>This is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</li>
+</ul></li>
+</ul>
 
 <p><a name="infeed/video/judge"></a></p>
 
 <h3 id="judgment-of-video-advertisement">Judgment of video advertisement</h3>
 
-<p>In the case of a video advertisement, <code>[RFPInstreamInfoModel isVideo]</code> is returned as <code>true</code>. This can be used to judge whether it is a video advertisement or not.</p>
+<p>In the case of a video advertisement, <code>RFPInstreamInfoModel.isVideo()</code> is returned as <code>true</code>. This can be used to judge whether it is a video advertisement or not.</p>
 
 <p><a name="infeed/video/delegate"></a></p>
 
@@ -481,42 +487,53 @@
 
 <p>There are two RFPInstreamAdLoaderDelegate methods used with video advertising.</p>
 
-<p><code>viewControllerForPresentingModalView</code>: Return the calling source ViewController. This is compulsory when playing back video advertisements.</p>
+<ul>
+<li><p><code>viewControllerForPresentingModalView</code></p>
 
-<p><code>readyToPlayWithPlayerControl:(RFPPlayerControl *)playerControl</code>:called when playback preparation is complete. Note that this is not played back even if <code>[playerControl play]</code> is executed before preparations are complete.</p>
+<ul>
+<li>Return the calling source ViewController. This is compulsory when playing back video advertisements.</li>
+</ul></li>
+
+<li><p><code>readyToPlay(with playerControl: RFPPlayerControl!)</code></p>
+
+<ul>
+<li>Called when playback preparation is complete. Note that this is not played back even if <code>playerControl.play()</code> is executed before preparations are complete.</li>
+</ul></li>
+</ul>
 
 <p><a name="infeed/video/init"></a></p>
 
 <h3 id="acquiring-video-advertisements">Acquiring video advertisements</h3>
 
-<p><code>RFPInstreamAdLoader getVideoControlWithFrame:Can use the infoModel:</code> to acquire <code>RFPPlayerControl</code>.</p>
+<p><code>instreamAdLoader.getVideoControl(withFrame:infoModel:)</code> Can use to acquire <code>RFPPlayerControl</code>.</p>
 
 <h4 id="specifying-viewcontrollerforpresentingmodalview">Specifying viewControllerForPresentingModalView</h4>
 
-<p>In the case of Video playback, be sure to specify viewControllerForPresentingModalView<code>in</code>RFPInstreamAdLoaderDelegate.</p>
+<p>In the case of Video playback, be sure to specify <code>RFPInstreamAdLoaderDelegate.viewControllerForPresentingModalView</code>.</p>
 
 <p>This is necessary when switching the video to Fullscreen.</p>
 
 <p>For the return value, specify the calling source UIViewController.</p>
 
-<pre><code class="language-objc">- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
-instreamInfoModels:(NSArray *)instreamInfoModels {
+<pre><code class="language-:swift">func rfpInstreamAdLoaderDidFinishLoadingAd(withReturn instreamAdLoader: RFPInstreamAdLoader!, instreamInfoModels: [Any]!) {
 
-    for (RFPInstreamInfoModel *info in instreamInfoModels) {
-        if ([info isVideo]) {
-// Acquiring RFPPlayerControl
-RFPPlayerControl *playerControl = [instreamAdLoader getVideoControlWithFrame:self.containerView.bounds
-infoModel:info];
-// Do not set other than playerUiView
-[[self.containerView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
-[self.containerView addSubview:playerControl];
+    // Acquiring In-Feed advertisement information
+    for model: RFPInstreamInfoModel in instreamInfoModels as! [RFPInstreamInfoModel] {
+        if (model.isVideo()) {
+            // Acquiring RFPPlayerControl
+            let playerControl = instreamAdLoader.getVideoControl(withFrame: containerView.bounds, infoModel: model)!
+            // Do not set other than playerUiView
+            containerView.subviews.forEach { subview in
+                subview.removeFromSuperview()
+            }
+            containerView.addSubview(playerControl)
         }
     }
 }
 
 // ※ Mandatory in case of video advertisement playback
-- (UIViewController *)viewControllerForPresentingModalView {
-    return self;
+func viewControllerForPresentingModalView() -&gt; UIViewController! {
+    return self
 }
 </code></pre>
 
@@ -524,15 +541,15 @@ infoModel:info];
 
 <h3 id="playback-preparation-complete">Playback preparation complete</h3>
 
-<p>When playback preparation is complete, <code>RFPInstreamAdLoaderDelegate readyToPlayWithPlayerContol:</code> is called.</p>
+<p>When playback preparation is complete, <code>RFPInstreamAdLoaderDelegate.readyToPlay(with:)</code> is called.</p>
 
 <p>The initial state of the player is a paused state.</p>
 
-<pre><code class="language-objc">- (void) readyToPlayWithPlayerControl:(RFPPlayerControl *)playerControl {
+<pre><code class="language-:swift">func readyToPlay(with playerControl: RFPPlayerControl!) {
     // Playback
-    [playerControl play];
+    playerControl.play()
     // Pause
-    [playerControl pause];
+    playerControl.pause()
 }
 </code></pre>
 
@@ -540,14 +557,14 @@ infoModel:info];
 
 <h3 id="playing-the-video">Playing the video</h3>
 
-<p>Start playback using <code>[RFPPlayerControl play]</code>.</p>
+<p>Start playback using <code>RFPPlayerControl.play()</code>.</p>
 
-<p>It is possible to pause using <code>[RFPPlayerControl pause]</code>.</p>
+<p>It is possible to pause using <code>RFPPlayerControl.pause()</code>.</p>
 
-<pre><code class="language-objc">    // Playback
-    [playerControl play];
+<pre><code class="language-:swift">    // Playback
+    playerControl.play()
     // Pause
-    [playerControl pause];
+    playerControl.pause()
 </code></pre>
 
 <p><a name="infeed/video/cache"></a></p>
@@ -560,26 +577,28 @@ infoModel:info];
 
 <p>The setting values recommended by the RFP are used for the cache capacity. This value can be changed from the app side.</p>
 
-<p>When changing the cache capacity, use the <code>rfpSetVideoCacheSize:</code> to set the cache capacity.</p>
+<p>When changing the cache capacity, use the <code>RFP.rfpSetVideoCacheSize(_:)</code> to set the cache capacity.</p>
 
-<pre><code class="language-objc">- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    long long size = [RFP rfpGetVideoCacheSize]; // Acquire current setting value
+<pre><code class="language-:swift">func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
 
-    // ※Be sure to set the rfpSetVideoCacheSize before rfpInitMedia
-    [RFP rfpSetVideoCacheSize:50];  //Set the video cache to 50 MB.
-    [RFP rfpSetVideoCacheSize:0];   //Disable the video cache
+    // Acquire current setting value
+    let size = RFP.rfpGetVideoCacheSize()
 
-    [RFP rfpInitMedia:@&quot;your_media_id&quot;];
+    //Set the video cache to 100 MB.
+    RFP.rfpSetVideoCacheSize(100);
 
-    // ...
+    // Disable the video cache
+    RFP.rfpSetVideoCacheSize(0);
+
+    // ※ Be sure to set the rfpSetVideoCacheSize before rfpInitMedia
+    RFP.rfpInitMedia(&quot;your_media_id&quot;)
 }
 </code></pre>
 
 <h4 id="points-to-note-when-setting-the-cache">Points to note when setting the cache</h4>
 
 <p>*In iOS11 or later, the cached video advertisements are displayed with the name”<code>video_ad_cache_rfp</code>” under ‘[Settings]’&gt;’[General]’&gt;<code>[iPhone storage]</code>&gt;<code>{each app name}</code>. This cached file can be deleted at any time by the user.
-* The cache is cleared at the time <code>rfpInitMedia:</code> is called. For this reason, the cache capacity temporarily set in <code>rfpSetVideoCacheSize:</code> may be exceeded.</p>
+* The cache is cleared at the time <code>rfpInitMedia</code> is called. For this reason, the cache capacity temporarily set in <code>rfpSetVideoCacheSize</code> may be exceeded.</p>
 
 
 <footer class=" footline" >
@@ -791,7 +810,7 @@ infoModel:info];
 
 
         
-            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized infeed advertising"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising"> <i class="fa fa-chevron-left"></i></a>
         
         
             <a class="nav nav-next" href="/RFP-iOS-SDK/en/programming-guide/2_6/" title="Set HTTP request timeout interval" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -803,20 +822,20 @@ infoModel:info];
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1531205135"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/learn.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1531205135"></script>
 
-    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1524557028" type="text/css" rel="stylesheet" />
-    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1524557028"></script>
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1531205135" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1531205135"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -58,6 +58,11 @@
 @property (nonatomic, readonly) NSURL *imageURL;
 
 /**
+ advertisement main creative size(width,height)
+ */
+@property (nonatomic, readonly) CGSize creativeSize;
+
+/**
  starts loading advertisement icon image for assigning a UIImage to the iconImageView,
  if you want to do so.
  

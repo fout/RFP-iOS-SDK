@@ -48,12 +48,12 @@ The advertisement framework ID is issued from the management screen. When the fo
       <description>Simple In-Feed advertisement display Acquiring events when displaying simple In-Feed advertisements Additional loading of simple In-Feed advertisements Simple In-Feed advertisement format Points to note when using simple In-Feed advertisements  A precondition for simple In-Feedadvertisements is use of UITableView.
 For other uses, use Customized In-Feed advertisements.
 
-Displaying simple In-Feed advertisements The necessary files for displaying In-Feed advertisements are as follows.
-RFPInstreamAdLoader.h  The abovementioned files are used in the following implementations to load In-Feed advertisements.</description>
+Displaying simple In-Feed advertisements Here is an implementation example of simple In-Feed advertisement.
+class YourViewController: UITableViewController, RFPInstreamAdLoaderDelegate { let adSpotId = &amp;quot;your_adspot_id&amp;quot; let adPositions = [3, 5] let instreamAdLoader = RFPInstreamAdLoader.</description>
     </item>
     
     <item>
-      <title>Customized infeed advertising</title>
+      <title>Customized In-Feed advertising</title>
       <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_4/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -69,7 +69,7 @@ RFPInstreamAdLoader.h  The abovementioned files are used in the following implem
       <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_5/</guid>
       <description>※ Currently video advertisements can only be used by limited partners
  Components provided in the video advertising SDK Video advertisement judgment Used with video advertising Delegate method Acquiring video advertisements Playback preparation complete Playing videos Setting the cache  
-Components provided with the video advertisement SDK RFPPlayerControl: this is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</description>
+Components provided with the video advertisement SDK  RFPPlayerControl  This is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</description>
     </item>
     
     <item>
@@ -80,8 +80,8 @@ Components provided with the video advertisement SDK RFPPlayerControl: this is t
       <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</guid>
       <description>Set HTTP request timeout interval  
 Set HTTP request timeout interval (Can be used on v2.6.0 or later)
-Your app can use the rfpSetHttpRequestTimeoutInterval: to set HTTP request&amp;rsquo;s timeout interval in RFP.
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions { // ※Be sure to set the rfpSetHttpRequestTimeoutInterval before rfpInitMedia [RFP rfpSetHttpRequestTimeoutInterval:15.0f]; //set HTTP request interval to 15s [RFP rfpInitMedia:@&amp;quot;your_media_id&amp;quot;]; // Acquire current setting value CGFloat timeoutInterval = [RFP rfpGetHttpRequestTimeoutInterval]; // .</description>
+Your app can use the RFP.rfpSetHttpRequestTimeoutInterval(_:) to set HTTP request&amp;rsquo;s timeout interval in RFP.
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&amp;gt; Bool { // Set HTTP request interval to 15s RFP.rfpSetHttpRequestTimeoutInterval(15) // ※ Be sure to set the rfpSetHttpRequestTimeoutInterval before rfpInitMedia RFP.rfpInitMedia(&amp;quot;your_media_id&amp;quot;) // Acquire current setting value let timeoutInterval = RFP.</description>
     </item>
     
   </channel>

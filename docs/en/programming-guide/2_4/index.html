@@ -10,22 +10,22 @@
     <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 
-    <title>Customized infeed advertising :: RFP-iOS-SDK Docs</title>
+    <title>Customized In-Feed advertising :: RFP-iOS-SDK Docs</title>
     
     
-    <link href="/RFP-iOS-SDK/css/nucleus.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hybrid.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/auto-complete.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/theme.css?1524557028" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1524557028" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1531205135" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1531205135" rel="stylesheet">
     
-      <link href="/RFP-iOS-SDK/css/theme-blue.css?1524557028" rel="stylesheet">
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1531205135" rel="stylesheet">
     
 
-    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1531205135"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1524557028"></script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1524557028"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1531205135"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1531205135"></script>
 <script type="text/javascript">
     
         var baseurl = "\/RFP-iOS-SDK\/en";
     
 </script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1524557028"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1531205135"></script>
 
     
   </div>
@@ -181,9 +181,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized infeed advertising" class="dd-item active">
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising" class="dd-item active">
         <a href="/RFP-iOS-SDK/en/programming-guide/2_4/">
-        Customized infeed advertising
+        Customized In-Feed advertising
         
         </a>
     </li>
@@ -397,7 +397,7 @@
             
           
           
-            <a href='/RFP-iOS-SDK/en/'>TOP</a> > <a href='/RFP-iOS-SDK/en/programming-guide/'>Programming Guide</a> > Customized infeed advertising
+            <a href='/RFP-iOS-SDK/en/'>TOP</a> > <a href='/RFP-iOS-SDK/en/programming-guide/'>Programming Guide</a> > Customized In-Feed advertising
           
          
           
@@ -439,7 +439,7 @@
         
         <div id="body-inner">
           
-            <h1>Customized infeed advertising</h1>
+            <h1>Customized In-Feed advertising</h1>
           
 
         
@@ -475,115 +475,105 @@
 
 <h3 id="loading-customized-in-feed-advertisements">Loading customized In-Feed advertisements</h3>
 
-<p>The necessary files for loading advertisements are as follows.</p>
+<p>Here is an implementation example of customized In-Feed advertisement.</p>
 
-<pre><code class="language-objc">RFPInstreamAdLoader.h
-RFPInstreamInfoModel.h
-</code></pre>
+<pre><code class="language-:swift">class YourViewController: UIViewController, RFPInstreamAdLoaderDelegate {
 
-<p>Implement the following steps by using the aforementioned files to load the In-Feed advertisements.</p>
+    let instreamAdLoader = RFPInstreamAdLoader.init()
+    let adSpotId = &quot;your_adspot_id&quot;
+    let positions = [0, 1, 2]
 
-<pre><code class="language-objc">
-//(1) Import the header
-#import &lt;RFP/RFPInstreamAdLoader.h&gt;
-#import &lt;RFP/RFPInstreamInfoModel.h&gt;
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-@interface YourViewController ()&lt;RFPInstreamAdLoaderDelegate&gt;
-//(2) Define properties
-@property(nonatomic) RFPInstreamAdLoader *instreamAdLoader;
-@end
-
-@implementation YourViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-
-    //(3) Instantiate RFPInstreamAdLoader. Set the delegate
-    self.instreamAdLoader = [RFPInstreamAdLoader new];
-    self.instreamAdLoader.delegate = self;
-
-    //(4) Call In-Feed advertising loading
-    [self.instreamAdLoader rfpLoadAdWithReturn:@&quot;XXXXXXXX&quot; adCount:6 positions:@[@3,@6,@9,@12,@15,@18]];
-}
-
-//(5) Complete In-Feed advertisement loading
-- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
-instreamInfoModels:(NSArray*)instreamInfoModels
-{
-	//(6) Receive the In-Feed advertising information
-    for (RFPInstreamInfoModel *info in instreamInfoModels) {
-        [_items insertObject:info atIndex:[info.position integerValue]];
+        // Set the delegate
+        instreamAdLoader.delegate = self
+        // Call In-Feed advertising loading
+        instreamAdLoader.rfpLoadAd(
+            withReturn: adSpotId,
+            adCount: UInt(positions.count),
+            positions: positions
+        )
     }
-	//(7) Update the display
-    [self.tableView reloadData];
+
+    // Complete In-Feed advertisement loading
+    func rfpInstreamAdLoaderDidFinishLoadingAd(withReturn instreamAdLoader: RFPInstreamAdLoader!, instreamInfoModels: [Any]!) {
+
+        // Receive the In-Feed advertising information
+        for model: RFPInstreamInfoModel in instreamInfoModels as! [RFPInstreamInfoModel] {
+            items[model.position.intValue] = model
+        }
+        // Update the display
+        tableView.realoadData();
+    }
 }
-
 </code></pre>
-
-<p>By implementing this as described above, In-Feed advertisements may be loaded.</p>
 
 <p><a name="infeed/custom/display"></a></p>
 
 <h3 id="displaying-customized-in-feed-advertisements">Displaying customized In-Feed advertisements</h3>
 
-<p>Display the advertisements based on the information acquired from <code>RFPInstreamInfoModel.h</code>. As <code>position</code> is used in the advertising results analysis, use this as reference when determining the position within the screen.</p>
+<p>Display the advertisements based on the information acquired from <code>RFPInstreamInfoModel</code>. As <code>position</code> is used in the advertising results analysis, use this as reference when determining the position within the screen.</p>
 
-<pre><code class="language-objc">
-	if (infoModel.title) {
-        self.adNameLabel.text = infoModel.title;
+<pre><code class="language-:swift">    if (model.title) {
+        titleLabel.text = model.title
     }
 
-    if (infoModel.content) {
-        self.adTextLabel.text = infoModel.content;
+    if (model.content) {
+        contentLabel.text = model.content
     }
 
-    if (0 &lt; [infoModel.displayedAdvertiser length]) {
-        self.adIndicatorLabel.text = infoModel.displayedAdvertiser;
-    } else {
-        self.adIndicatorLabel.text = @&quot;PR&quot;;
-    }
-
-    [infoModel rfpLoadIconImage:self.adIconImageView completion:^(NSError *iconImageLoadError) {
-        [infoModel rfpLoadImage:self.adImageView completion:^(NSError *imageLoadError) {
-if (iconImageLoadError || imageLoadError) {
-NSLog(@&quot;error&quot;);
-} else {
-NSLog(@&quot;ok, start sending an impression log&quot;);
-			     [self.instreamAdLoader rfpMeasureImp:infoModel];
-}
-        }];
-    }];
-
+    model.rfpLoadImage(imageView, completion: { error -&gt; Void in
+        print(&quot;Load Finish.&quot;)
+        if (error != nil) {
+            print(&quot;Load Error.&quot;, error!)
+        } else {
+            instreamAdLoader.rfpMeasureImp(model)
+        }
+    })
 </code></pre>
 
 <p><a name="infeed/custom/imp"></a></p>
 
 <h3 id="notifying-impressions-of-customized-in-feed-advertisements">Notifying impressions of customized In-Feed advertisements</h3>
 
-<p>When display of advertisements is complete, notify the impressions.
-Call <code>rfpMeasureImp:</code> in `RFPInstreamAdLoader.h.</p>
+<p>When display of advertisements is complete, notify the impressions.</p>
+
+<p>Call <code>RFPInstreamAdLoader.rfpMeasureImp(_:)</code>.</p>
+
+<pre><code class="language-:swift">// model: RFPInstreamInfoProtocol!
+RFPInstreamAdLoader.rfpMeasureImp(model)
+</code></pre>
 
 <p><a name="infeed/custom/click"></a></p>
 
 <h3 id="processing-transitions-when-clicking-customized-in-feed-advertisements">Processing transitions when clicking customized In-Feed advertisements</h3>
 
-<p>When the advertisement is clicked, user is appropriately transitioned by calling the following method.
-Call <code>rfpSendClickEvent:</code> from <code>RFPInstreamAdLoader.h</code>.</p>
+<p>When the advertisement is clicked, user is appropriately transitioned by calling the following method.</p>
+
+<p>Call <code>RFPInstreamAdLoader.rfpSendClickEvent(_:)</code>.</p>
+
+<pre><code class="language-:swift">// model: RFPInstreamInfoProtocol!
+RFPInstreamAdLoader.rfpSendClickEvent(model)
+</code></pre>
 
 <p><a name="infeed/custom/ctatext"></a></p>
 
 <h3 id="acquires-the-button-display-characters-for-customized-in-feed-advertisements">Acquires the button display characters for customized In-Feed advertisements</h3>
 
-<p>Acquires characters displayed on the button (user action) set from the management screen using <code>getCtaText</code> from <code>RFPInstreamInfoModel.h</code>.</p>
+<p>Acquires characters displayed on the button (user action) set from the management screen using <code>RFPInstreamInfoModel.getCtaText()</code>.</p>
 
-<pre><code class="language-objc">- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
-instreamInfoModels:(NSArray *)instreamInfoModels {
-    for (RFPInstreamInfoModel *info in instreamInfoModels) {
-        if ([info isVideo]) {
-//Acquiring the button display characters &quot;See here for details&quot;,&quot;Reserver&quot;,&quot;Purchase&quot;,&quot;Register&quot; ....
-NSLog(@&quot;Button Name=[%@]&quot;, [info getCtaText]);
-        }
+<pre><code class="language-:swift">func rfpInstreamAdLoaderDidFinishLoadingAd(withReturn instreamAdLoader: RFPInstreamAdLoader!, instreamInfoModels: [Any]!) {
+
+    for model: RFPInstreamInfoModel in instreamInfoModels as! [RFPInstreamInfoModel] {
+
+        // Acquiring the button display characters
+        //   - &quot;See here for details&quot;
+        //   - &quot;Reserver&quot;
+        //   - &quot;Purchase&quot;
+        //   - &quot;Register&quot; ....
+        print(&quot;Button Name&quot;, model.getCtaText())
+
     }
 }
 </code></pre>
@@ -596,57 +586,47 @@ NSLog(@&quot;Button Name=[%@]&quot;, [info getCtaText]);
 
 <p>In this case, the delegate property in  <code>RFPInstreamAdLoader</code> conforms to <code>RFPInstreamAdLoaderDelegate</code>, and can be received.</p>
 
-<pre><code class="language-objc">- (void)viewDidLoad
-{
-    //(1) Set delegate
-    self.instreamAdLoader.delegate = self;
+<pre><code class="language-:swift">override func viewDidLoad() {
+    super.viewDidLoad()
+    // (1) Set delegate
+    instreamAdLoader.delegate = self
 }
 
-//(2)When starting advertisement loading
-- (void)rfpInstreamAdLoaderDidStartLoadingAd:(RFPInstreamAdLoader *)instreamAdLoader
-{
+// (2) When starting advertisement loading
+func rfpInstreamAdLoaderDidStartLoadingAd(_ instreamAdLoader: RFPInstreamAdLoader!) {
 }
 
-//(3) When completing advertisement loading
-- (void)rfpInstreamAdLoaderDidFinishLoadingAdWithReturn:(RFPInstreamAdLoader *)instreamAdLoader
-instreamInfoModels:(NSArray*)instreamInfoModels
-{
+// (3) When completing advertisement loading
+func rfpInstreamAdLoaderDidFinishLoadingAd(_ instreamAdLoader: RFPInstreamAdLoader!) {
 }
 
-//(4) When completing notification of advertisement impression
-- (void)rfpInstreamAdLoaderDidFinishSendingAdImp
-{
+// (4) When completing notification of advertisement impression
+func rfpInstreamAdLoaderDidFinishSendingAdImp() {
 }
 
-//(5) When completing advertisement click processing
-- (void)rfpInstreamAdLoaderDidFinishSendingAdClick
-{
+// (5) When completing advertisement click processing
+func rfpInstreamAdLoaderDidFinishSendingAdClick() {
 }
 
-//(6) When advertisement loading fails
-- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToLoadAdWithError:(NSError *)error
-{
+// (6) When advertisement loading fails
+func rfpInstreamAdLoader(_ instreamAdLoader: RFPInstreamAdLoader!, didFailToLoadAdWithError error: Error!) {
 }
 
-//(7) When advertisement impression notification fails
-- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToSendImpWithError:(NSError *)error
-{
+// (7) When advertisement impression notification fails
+func rfpInstreamAdLoader(_ instreamAdLoader: RFPInstreamAdLoader!, didFailToSendImpWithError error: Error!) {
 }
 
-//(8) When advertisement click processing fails
-- (void)rfpInstreamAdLoader:(RFPInstreamAdLoader *)instreamAdLoader didFailToSendClickWithError:(NSError *)error
-{
+// (8) When advertisement click processing fails
+func rfpInstreamAdLoader(_ instreamAdLoader: RFPInstreamAdLoader!, didFailToSendClickWithError error: Error!) {
 }
 
-//(9) Video advertisement playback preparation complete
-- (void) readyToPlayWithPlayerControl:(RFPPlayerControl *)playerControl
-{
+// (9) Video advertisement playback preparation complete
+func readyToPlay(with playerControl: RFPPlayerControl!) {
 }
 
 // (※)Compulsory when playing back video advertising
-- (UIViewController *)viewControllerForPresentingModalView
-{
-    return self;
+func viewControllerForPresentingModalView() -&gt; UIViewController! {
+    return self
 }
 </code></pre>
 
@@ -691,21 +671,21 @@ instreamInfoModels:(NSArray*)instreamInfoModels
 </tr>
 
 <tr>
+<td>imageURL</td>
+<td>banner-type square images (variable size for each advertising framework ID) resources</td>
+<td>NSURL objects</td>
+</tr>
+
+<tr>
 <td>iconImageURL</td>
 <td>Icon-type square images (114 x 114 pixels) resources</td>
 <td>NSURL objects</td>
 </tr>
 
 <tr>
-<td>mainImageURL</td>
-<td>banner-type square images (variable size for each advertising framework ID) resources</td>
-<td>NSURL objects</td>
-</tr>
-
-<tr>
-<td>adId</td>
-<td>advertisement ID</td>
-<td>255</td>
+<td>creativeSize</td>
+<td>Size of banner image (or video advertisement)</td>
+<td>CGSize objects</td>
 </tr>
 </tbody>
 </table>
@@ -714,11 +694,10 @@ instreamInfoModels:(NSArray*)instreamInfoModels
 <li>Icon-type square images and banner-type square images can be acquired by using the following methods. This method caches the images internally, so we recommend using it.
 
 <ul>
-<li><code>- (void)rfpLoadIconImage:(UIImageView*)iconImageView completion:(void (^)(NSError *error)) completion;</code></li>
-<li><code>- (void)rfpLoadImage:(UIImageView*)imageView completion:(void (^)(NSError *error)) completion;</code></li>
+<li><code>RFPInstreamInfoModel.rfpLoadImage(_:UIImageView!,completion:((Error!) -&gt; ())!)</code></li>
+<li><code>RFPInstreamInfoModel.rfpLoadIconImage(_:UIImageView!,completion:((Error!) -&gt; ())!)</code></li>
 </ul></li>
-<li><code>Description/introductory text</code> is a <code>content</code> property. NSObject <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/index.html#//apple_ref/occ/clm/NSObject/description">description</a> This is not a method. Please take caution.</li>
-<li>Use getAdld from RFPInstreamInfoModel when acquiring the advertisement ID.</li>
+<li>Use <code>RFPInstreamInfoModel.getAdId()</code> when acquiring the advertisement ID.</li>
 </ul>
 
 <p><a name="infeed/custom/format"></a></p>
@@ -741,39 +720,33 @@ Choose the format to use from among those above
 
 <p>It is possible to use <a href="../2_3/#infeed/simple/format">formats that can be used from simple In-Feed advertising</a>.</p>
 
-<p>Implement as follows by using the aforementioned files to display the default advertising format.</p>
+<p>Set the header of the format in <a href="../../installation-guide/#swiftpj">Bridging-Header.h</a> to use in advance.</p>
 
-<pre><code class="language-objc">//(1) Import the header you wish to use
-#import &lt;RFP/RFPInstreamAdCellThumbnailMiddle.h&gt;
+<pre><code class="language-:objc">#import &lt;RFP/RFPInstreamAdCellThumbnailMiddle.h&gt;
+</code></pre>
 
-- (void)viewDidLoad
-{
-	//(2) Register the advertising format class you wish to use in advance
-    [self.tableView registerClass:[RFPInstreamAdCellThumbnailMiddle class] forCellReuseIdentifier:@&quot;RFPInstreamAdCellThumbnailMiddle&quot;];
-	...
+<p>Implement as follows to display the default advertising format.</p>
+
+<pre><code class="language-:swift">override func viewDidLoad() {
+    super.viewDidLoad()
+    // Register the class of the ad format you want to use in advance
+    self.tableView.register(RFPInstreamAdCellThumbnailMiddle.self, forCellReuseIdentifier: &quot;adCell&quot;)
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	//The determination of whether it is an advertising framework or not is based on the media
-    BOOL isAd = [self isAdCellAt:indexPath];
-    if (isAd) {
-        RFPInstreamInfoModel *adItem = (RFPInstreamInfoModel*)_items[indexPath.row];
+override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
 
-		//(3) Extract the advertising format class registered in advance
-	    UITableViewCell&lt;RFPInstreamAdCellProtocol&gt; *cell = [tableView dequeueReusableCellWithIdentifier:@&quot;RFPInstreamAdCellThumbnailMiddle&quot; forIndexPath:indexPath];
+    let model = items[indexPath.row]!
 
-		//(4) Depict the cells based on the loaded advertising information
-	    [cell updateCell:adItem completion:^(NSError *error) {
+    // Extract the advertising format class registered in advance
+    let cell = tableView.dequeueReusableCell(withIdentifier: &quot;adCell&quot;, for: indexPath) as! RFPInstreamAdCellThumbnailMiddle
 
-			//(5) After depiction is completed, send the impression log
-    	    [self.instreamAdLoader rfpMeasureImp:adItem];
-	    }];
+    // Depict the cells based on the loaded advertising information
+    cell.rfpUpdateCell(model, completion: { (error) -&gt; () in
+        // After depiction is completed
+        print(&quot;Updated Cell&quot;)
+    })
 
-    	return cell;
-    }
-
-    ...
+    return cell
 }
 </code></pre>
 
@@ -781,32 +754,34 @@ Choose the format to use from among those above
 
 <h3 id="acquire-exceptions-occurring-within-sdk">Acquire exceptions occurring within SDK</h3>
 
-<p>By using <code>RFPExceptionDelegate</code>, exceptional contents occurring within SDK may be acquired..</p>
+<p>By using <code>RFPExceptionDelegate</code>, exceptional contents occurring within SDK may be acquired.</p>
 
-<pre><code>@interface MyViewController () &lt;RFPInstreamAdLoaderDelegate, RFPExceptionDelegate&gt;
+<pre><code class="language-:swift">class YourViewController: UIViewController, RFPInstreamAdLoaderDelegate, RFPExceptionDelegate {
 
-@property(nonatomic) RFPInstreamAdLoader *adLoader;
+    let instreamAdLoader = RFPInstreamAdLoader.init()
+    let adSpotId = &quot;your_adspot_id&quot;
+    let positions = [0, 1, 2]
 
-@end
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-@implementation MyViewController
+        // Set delegate
+        instreamAdLoader.exceptionDelegate = self
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.adLoader = [RFPInstreamAdLoader new];
-    self.adLoader.delegate = self;
-    self.adLoader.exceptionDelegate = self; // Set delegate
-    [self.adLoader rfpLoadAdWithReturn:@&quot;adSpotId&quot;
-adCount:1
-positions:@[@3]];
+        // Call In-Feed advertising loading
+        instreamAdLoader.delegate = self
+        instreamAdLoader.rfpLoadAd(
+            withReturn: adSpotId,
+            adCount: UInt(positions.count),
+            positions: positions
+        )
+    }
+
+    // Exception content acquisition Delegate
+    func exceptionOccurred(_ error: Error!) {
+        print(&quot;exceptionOccurred&quot;, error)
+    }
 }
-
-// Exception content acquisition Delegate
-- (void)exceptionOccurred:(NSError *)error {
-    NSLog(@&quot;exception=[%@]&quot;, error);
-}
-
-@end
 </code></pre>
 
 
@@ -1031,20 +1006,20 @@ positions:@[@3]];
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1531205135"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/learn.js?1524557028"></script>
-    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1524557028"></script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1531205135"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1531205135"></script>
 
-    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1524557028" type="text/css" rel="stylesheet" />
-    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1524557028"></script>
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1531205135" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1531205135"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
