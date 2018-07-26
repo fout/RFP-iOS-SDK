@@ -68,8 +68,8 @@ class YourViewController: UITableViewController, RFPInstreamAdLoaderDelegate { l
       
       <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_5/</guid>
       <description>※ Currently video advertisements can only be used by limited partners
- Components provided in the video advertising SDK Video advertisement judgment Used with video advertising Delegate method Acquiring video advertisements Playback preparation complete Playing videos Setting the cache  
-Components provided with the video advertisement SDK  RFPPlayerControl  This is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</description>
+ Components provided in the video advertising SDK Video advertisement judgment Used with video advertising Delegate method Acquiring video advertisements Playback preparation complete Playing videos End playback Setting the cache Setting the tap action  
+Components provided with the video advertisement SDK  RFPPlayerControl  This is the UI view displaying the video player. This provides a function to control the video.</description>
     </item>
     
     <item>

@@ -109,8 +109,14 @@
 - (UIViewController *)viewControllerForPresentingModalView;
 
 /**
- * Tells AVPlayer Ready to Play;
+ * Tells AVPlayer Ready to Play.
  */
 - (void)readyToPlayWithPlayerControl:(RFPPlayerControl *)playerControl;
+
+/**
+ * Tells AVPlayer Finished playing.
+ */
+- (void)didPlayToEndTimeWithPlayerControl:(RFPPlayerControl *)playerControl;
+
 
 @end

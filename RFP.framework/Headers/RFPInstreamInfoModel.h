@@ -46,12 +46,6 @@
 @property (nonatomic, readonly) NSString *displayedAdvertiser;
 
 /**
- advertisement icon image url to be loaded in the tableView.
- you can use it directly instead of using loadIconImage
- */
-@property (nonatomic, readonly) NSURL *iconImageURL;
-
-/**
  advertisement main image url to be loaded in the tableView.
  you can use it directly instead of using loadImage
  */
@@ -63,23 +57,11 @@
 @property (nonatomic, readonly) CGSize creativeSize;
 
 /**
- starts loading advertisement icon image for assigning a UIImage to the iconImageView,
- if you want to do so.
- 
- @param iconImageView  `UIImageView` instance to be assigned the icon image
- @param completion     callback block to inform an error. If the error is nil and loadImage:completion is also completed, invoke measureImp API.
- 
- @see RFPInstreamAdLoader.h
- */
-
-- (void)rfpLoadIconImage:(UIImageView*)iconImageView completion:(void (^)(NSError *error)) completion;
-
-/**
  starts loading advertisement main image for assigning a UIImage to the imageView,
  if you want to do so.
  
  @param imageView   `UIImageView` instance to be assigned the main image
- @param completion  callback block to inform an error. If the error is nil and loadIconImage:completion is also completed, invoke measureImp API.
+ @param completion  callback block to inform an error. If the error is nil, invoke measureImp API.
  
  @see RFPInstreamAdLoader.h
  */
