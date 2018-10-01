@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jdq-0K-Bic">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qm3-1J-0ZG">
+            <objects>
+                <navigationController id="Jdq-0K-Bic" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F7T-RN-4lE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZU1-CA-5Ku" kind="relationship" relationship="rootViewController" id="WNr-h8-MIo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vDY-1H-nOY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-799" y="-328"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="2ls-h1-dVA">
+            <objects>
+                <viewController title="Menu" id="ZU1-CA-5Ku" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aEn-19-YaB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiu-pr-ipr" customClass="RFPCustomButton" customModule="RFPDemoSwift" customModuleProvider="target">
+                                <rect key="frame" x="87" y="352" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="qQF-yy-i8I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Sample Feed">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="D3T-h2-pcS" kind="show" id="BBn-P6-PYG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="native_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khx-sN-2RN">
+                                <rect key="frame" x="0.0" y="180" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sLb-g6-K8e"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poets_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-k3-oKG">
+                                <rect key="frame" x="0.0" y="240" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="az0-jk-qnx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rfp_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCw-BE-iDI">
+                                <rect key="frame" x="0.0" y="114" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="171-fr-cH6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aCw-BE-iDI" secondAttribute="trailing" id="45S-2B-RUh"/>
+                            <constraint firstItem="Khx-sN-2RN" firstAttribute="leading" secondItem="6Do-mA-cNH" secondAttribute="leading" id="8Iu-Kr-ai3"/>
+                            <constraint firstItem="aCw-BE-iDI" firstAttribute="top" secondItem="6Do-mA-cNH" secondAttribute="top" constant="50" id="C0M-YB-NNe"/>
+                            <constraint firstItem="vQK-k3-oKG" firstAttribute="top" secondItem="Khx-sN-2RN" secondAttribute="bottom" constant="10" id="QlX-lY-Faa"/>
+                            <constraint firstItem="Khx-sN-2RN" firstAttribute="trailing" secondItem="6Do-mA-cNH" secondAttribute="trailing" id="S8D-4t-oI4"/>
+                            <constraint firstItem="aCw-BE-iDI" firstAttribute="leading" secondItem="aEn-19-YaB" secondAttribute="leading" id="UwR-GT-uFG"/>
+                            <constraint firstItem="aCw-BE-iDI" firstAttribute="centerX" secondItem="aEn-19-YaB" secondAttribute="centerX" id="bR5-X7-N9M"/>
+                            <constraint firstItem="Khx-sN-2RN" firstAttribute="top" secondItem="aCw-BE-iDI" secondAttribute="bottom" constant="10" id="gb1-0L-B9G"/>
+                            <constraint firstItem="vQK-k3-oKG" firstAttribute="leading" secondItem="6Do-mA-cNH" secondAttribute="leading" id="hhh-mS-KVO"/>
+                            <constraint firstItem="aiu-pr-ipr" firstAttribute="centerX" secondItem="aEn-19-YaB" secondAttribute="centerX" id="pc5-i1-RLm"/>
+                            <constraint firstItem="vQK-k3-oKG" firstAttribute="trailing" secondItem="6Do-mA-cNH" secondAttribute="trailing" id="uaw-1Y-xCJ"/>
+                            <constraint firstItem="aiu-pr-ipr" firstAttribute="top" secondItem="vQK-k3-oKG" secondAttribute="bottom" constant="72" id="uiu-YV-kt6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Do-mA-cNH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Menu" id="XJH-pH-Owg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JRo-Up-i9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.80000000000001" y="-328.78560719640183"/>
+        </scene>
+        <!--Feed-->
+        <scene sceneID="AR0-AO-3xC">
+            <objects>
+                <tableViewController title="Feed" id="D3T-h2-pcS" customClass="FeedTableViewController" customModule="RFPDemoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4qC-Nt-28d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="D3T-h2-pcS" id="hN9-UK-MfK"/>
+                            <outlet property="delegate" destination="D3T-h2-pcS" id="2sJ-q7-XuX"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4F-2G-Y1y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="native_logo" width="1139" height="342"/>
+        <image name="poets_logo" width="1263" height="297"/>
+        <image name="rfp_logo" width="1040" height="468"/>
+    </resources>
+</document>
