@@ -11,21 +11,7 @@
     
     
     <item>
-      <title>Introduction</title>
-      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_1/</guid>
-      <description>Acquiring the Media Id Initialization within the code  This guide summarizes SDK usage.
-For the detailed API specification, see the comments in each header file within the framework.
-
-Acquisition of Media Id Register from the management screen to issue the Media Id.
-(At the current stage, inquiries should be made to the representative)
-This Media ID uses the app identification, so be sure not to forget this.</description>
-    </item>
-    
-    <item>
-      <title>Acquisition of advertising framework Id</title>
+      <title>Acquisition of advertising framework ID</title>
       <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -45,11 +31,9 @@ The advertisement framework ID is issued from the management screen. When the fo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_3/</guid>
-      <description>Simple In-Feed advertisement display Acquiring events when displaying simple In-Feed advertisements Additional loading of simple In-Feed advertisements Simple In-Feed advertisement format Points to note when using simple In-Feed advertisements  A precondition for simple In-Feedadvertisements is use of UITableView.
-For other uses, use Customized In-Feed advertisements.
-
-Displaying simple In-Feed advertisements Here is an implementation example of simple In-Feed advertisement.
-class YourViewController: UITableViewController, RFPInstreamAdLoaderDelegate { let adSpotId = &amp;quot;your_adspot_id&amp;quot; let adPositions = [3, 5] let instreamAdLoader = RFPInstreamAdLoader.</description>
+      <description>Simple In-Feed advertisement display Acquiring events when displaying simple In-Feed advertisements Additional loading of simple In-Feed advertisements Simple In-Feed advertisement format Points to note when using simple In-Feed advertisements  In order to display advertisements, you need to enable SDK first. For details, please refer to Installing Guide and Initializing the SDK
+A precondition for simple In-Feed advertisements is use of UITableView.
+For other uses, use Customized In-Feed advertisements.</description>
     </item>
     
     <item>

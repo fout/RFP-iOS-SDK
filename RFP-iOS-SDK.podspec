@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RFP-iOS-SDK"
-  s.version      = "2.8.1"
+  s.version      = "2.8.2"
   s.summary      = "RFP SDK for iOS"
   s.homepage     = "https://github.com/fout/RFP-iOS-SDK"
   s.license      = {

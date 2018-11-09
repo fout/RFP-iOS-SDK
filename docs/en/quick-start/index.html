@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.34" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
+
+    <title>Quick Start :: RFP-iOS-SDK Docs</title>
+    
+    
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1541741927" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1541741927" rel="stylesheet">
+    
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1541741927" rel="stylesheet">
+    
+
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1541741927"></script>
+    
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{ 
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/RFP-iOS-SDK/en/quick-start/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://fout.github.io/RFP-iOS-SDK/en">
+    RFP-iOS-SDK Docs
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1541741927"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1541741927"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/RFP-iOS-SDK\/en";
+    
+</script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1541741927"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/quick-start/" title="Quick Start" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/quick-start/">
+          <b>1. </b>Quick Start
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/installation-guide/" title="Installation Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/installation-guide/">
+          <b>2. </b>Installation Guide
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/" title="Programming Guide" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/programming-guide/">
+          <b>3. </b>Programming Guide
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_2/" title="Acquisition of advertising framework ID" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_2/">
+        Acquisition of advertising framework ID
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_3/" title="Simple infeed advertising" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_3/">
+        Simple infeed advertising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_4/">
+        Customized In-Feed advertising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_5/" title="Support for video advertising" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_5/">
+        Support for video advertising
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_6/" title="Set HTTP request timeout interval" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_6/">
+        Set HTTP request timeout interval
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/faq/" title="FAQ" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/faq/">
+          <b>4. </b>FAQ
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/RFP-iOS-SDK/en/changelog/" title="CHANGELOG" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/RFP-iOS-SDK/en/changelog/">
+          <b>5. </b>CHANGELOG
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/fout/RFP-iOS-SDK"><i class='fa fa-fw fa-github'></i> Github repo</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fa fa-fw fa-language"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="ja" value="/RFP-iOS-SDK/quick-start/">日本語</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="en" value="/RFP-iOS-SDK/en/quick-start/" selected>English</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+       
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Docs are generated by using <a href="http://gohugo.io/">Hugo</a>.</p>
+<p>Theme provided by <a href="https://github.com/matcornic/hugo-theme-learn/">hugo-theme-learn</a>.</p>
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/RFP-iOS-SDK/en/'>TOP</a> > Quick Start
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#initializing-the-sdk">Initializing the SDK</a></li>
+<li><a href="#loading-advertisements">Loading advertisements</a></li>
+<li><a href="#displaying-advertisements">Displaying advertisements</a></li>
+<li><a href="#sending-advertisements-events">Sending advertisements events</a>
+<ul>
+<li>
+<ul>
+<li><a href="#notifying-impression">Notifying impression</a></li>
+<li><a href="#processing-transitions-when-clicking-advertisements">Processing transitions when clicking advertisements</a></li>
+<li><a href="#timing-of-impression-notification">Timing of impression notification</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1>Quick Start</h1>
+          
+
+        
+
+
+
+
+<ul>
+<li><a href="#start/env">Prerequisites</a></li>
+<li><a href="#start/init">Initializing the SDK</a></li>
+<li><a href="#start/ad_load">Loading advertisements</a></li>
+<li><a href="#start/ad_display">Displaying advertisements</a></li>
+<li><a href="#start/ad_event">Sending advertisements events</a></li>
+</ul>
+
+<p>This chapter will explain the procedure for displaying the advertisement in the application and measuring the effectiveness of the advertisement.<br>
+For the details, please refer to <a href="../programming-guide">3.Programming Guide</a>.</p>
+
+<div class="notices note" ><p>The following guide shows an example based on <code>UITableView</code>, but it may be used in other cases such as <code>UIView</code>.</p>
+</div>
+
+
+<p><a name="start/env"></a></p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li><p>Following <a href="../installation-guide">Installation Guide</a> to import the SDK into your application.</p></li>
+
+<li><p>Register from the management screen to issue the Media ID and advertising framework ID(<code>adSpotId</code>) .
+<strong>(At the current stage, inquiries should be made to the representative)</strong></p></li>
+</ul>
+
+<div class="notices note" ><p>Media ID uses the app identification.<br>
+Advertising framework ID (<code>adSpotId</code>) is a unique identifier used to distinguish an advertisement framework,
+See <a href="../programming-guide/2_2">Acquisition of advertising framework ID</a> for details on advertising framework ID.</p>
+</div>
+
+
+<p><a name="start/init"></a></p>
+
+<h2 id="initializing-the-sdk">Initializing the SDK</h2>
+
+<p>RFP is initialized with the Media ID acquired as described above as the argument.</p>
+
+<p>Unless there is a particular reason, stipulate as</p>
+
+<p><a href="https://developer.apple.com/documentation/uikit/uiapplicationdelegate?language=swift#topics">UIApplicationDelegate application(_:didFinishLaunchingWithOptions:)</a></p>
+
+<pre><code class="language-:swift">func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
+    // Override point for customization after application launch.
+    RFP.rfpInitMedia(&quot;your_media_id&quot;)
+
+    return true
+}
+</code></pre>
+
+<p>Please note that <strong>unless initialization takes place, the general acquisition of advertisements, to be described later, cannot be performed</strong>.</p>
+
+<p><a name="start/ad_load"></a></p>
+
+<h2 id="loading-advertisements">Loading advertisements</h2>
+
+<p>Advertising framework ID(<code>adSpotId</code>) and <code>positions</code> for advertisements&rsquo; indexes in the UITableView and advertisements&rsquo; counts are needed.
+As <code>position</code> is used in the advertising results analysis, use this as reference when determining the position within the screen.</p>
+
+<p>Please set listed three arguments and call &lsquo;rfpLoadAd&rsquo; to load advertisements.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Argument</th>
+<th align="left">Usage</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">adSpotId</td>
+<td align="left">advertisements&rsquo; framework ID</td>
+</tr>
+
+<tr>
+<td align="left">adCount</td>
+<td align="left">advertisements&rsquo; counts</td>
+</tr>
+
+<tr>
+<td align="left">positions</td>
+<td align="left">advertisements&rsquo; indexes</td>
+</tr>
+</tbody>
+</table>
+
+<div class="notices note" ><p>The following guide shows an example based on <code>UITableView</code>, but it may be used in other cases such as <code>UIView</code>.<br>
+Set positions = [0] means insert advertisement to the head of UITableView,
+positions = [1, 4] means insert advertisements to the second and fifth indexes of UITableView.<br>
+positions = [0]　also may be used in other layout with one advertisement.</p>
+
+<figure >
+    
+        <img src="adload.png" />
+    
+    
+    <figcaption>
+        <h4>image of positions = [1, 4]</h4>
+        
+    </figcaption>
+    
+</figure>
+</div>
+
+
+<pre><code class="language-:swift">class YourViewController: UIViewController, RFPInstreamAdLoaderDelegate {
+
+    let instreamAdLoader = RFPInstreamAdLoader.init()
+    // Advertising framework ID
+    let adSpotId = &quot;your_adspot_id&quot;
+    // insert 2 advertisements into UITableView
+    let positions = [1, 4]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // set delegate
+        instreamAdLoader.delegate = self
+        // load Advertisements
+        instreamAdLoader.rfpLoadAd(
+            withReturn: adSpotId,
+            adCount: UInt(positions.count),
+            positions: positions
+        )
+    }
+}
+</code></pre>
+
+<p><a name="start/ad_display"></a></p>
+
+<h2 id="displaying-advertisements">Displaying advertisements</h2>
+
+<p>Display the advertisements based on the information acquired from <code>RFPInstreamInfoModel</code>.</p>
+
+<pre><code class="language-:swift">// RFPInstreamAdLoaderDelegate methods
+// ads finished load
+func rfpInstreamAdLoaderDidFinishLoadingAd(withReturn instreamAdLoader: RFPInstreamAdLoader!, instreamInfoModels: [Any]!) {
+    // get ads' information
+    for model: RFPInstreamInfoModel in instreamInfoModels as! [RFPInstreamInfoModel] {
+        if (model.title) {
+            // ad's title
+            titleLabel.text = model.title
+        }
+
+        if (model.content) {
+            // ad's label
+            contentLabel.text = model.content
+        }
+        // load ad's image
+        model.rfpLoadImage(imageView, completion: { error -&gt; Void in
+            print(&quot;Load Finish.&quot;)
+            if (error != nil) {
+                print(&quot;Load Error.&quot;, error!)
+            } else {
+                // after image load finished, send impression event
+                instreamAdLoader.rfpMeasureImp(model)
+            }
+        })
+    }
+    // ... update UITableView ...
+    tableView.realoadData();
+}
+</code></pre>
+
+<div class="notices note" ><p>For image loading processing, we recommend to use the common image load library such as SDWebImage</p>
+</div>
+
+
+<p><a name="start/ad_event"></a></p>
+
+<h2 id="sending-advertisements-events">Sending advertisements events</h2>
+
+<p>For measuring the advertisement&rsquo;s, it is necessary to notify the events of the advertisement.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Event</th>
+<th align="left">Notify Timing</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">impression</td>
+<td align="left">when advertisement&rsquo;s display is completed</td>
+</tr>
+
+<tr>
+<td align="left">click</td>
+<td align="left">when advertisement is clicked</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="notifying-impression">Notifying impression</h4>
+
+<p>After advertisement displayed, please call
+<code>RFPInstreamAdLoader.rfpMeasureImp(_:)</code> to send impression event.</p>
+
+<pre><code class="language-:swift">// model: RFPInstreamInfoProtocol!
+RFPInstreamAdLoader.rfpMeasureImp(model)
+</code></pre>
+
+<h4 id="processing-transitions-when-clicking-advertisements">Processing transitions when clicking advertisements</h4>
+
+<p>When the advertisement is clicked, user is appropriately transitioned by calling the following method.</p>
+
+<pre><code class="language-:swift">// model: RFPInstreamInfoProtocol!
+RFPInstreamAdLoader.rfpSendClickEvent(model)
+</code></pre>
+
+<p><a name="start/viewable_imp"></a></p>
+
+<h4 id="timing-of-impression-notification">Timing of impression notification</h4>
+
+<p>In order to guarantee that advertisements are viewable, this SDK recommends <strong>viewable impression</strong>.
+Advertisement&rsquo;s viewable impression must satisfy the impression conditions and must satisfy the following.</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">Advertisement&rsquo;s type</th>
+<th align="left">conditions</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Display ads</td>
+<td align="left">condition1. at least 50% of the advertisement is visible　<br> condition2. visible for at least 1 second</td>
+</tr>
+
+<tr>
+<td align="left">Video ads</td>
+<td align="left">condition1. at least 50% of the advertisement is visible　<br> condition2. visible for at least 2 consecutive seconds</td>
+</tr>
+</tbody>
+</table>
+
+
+<figure >
+    
+        <img src="impression.png" />
+    
+    
+    <figcaption>
+        <h4>Ad&#39;s viewable impression</h4>
+        
+    </figcaption>
+    
+</figure>
+
+
+<p>More details, please refer to <a href="https://www.jiaa.org/dbps_data/_material_/localhost/topics/20170531viewable_measurement_guidance.pdf">JIAA(Japanese)</a>, and <a href="https://www.iab.com/wp-content/uploads/2015/06/MRC-Viewable-Ad-Impression-Measurement-Guideline.pdf">IAB/MRC(English)</a>.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/" title="TOP"> <i class="fa fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/RFP-iOS-SDK/en/installation-guide/" title="Installation Guide" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1541741927"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1541741927"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1541741927"></script>
+
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1541741927" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1541741927"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>

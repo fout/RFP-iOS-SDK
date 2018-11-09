@@ -11,15 +11,6 @@
     
     
     <item>
-      <title>はじめに</title>
-      <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_1/</guid>
-      <description>Media Id の取得 コード内初期化 本ガイドは SDK の使い方の概略を示したものです。 詳細な API 仕様などについては、framework内の各ヘッダーファイルのコ</description>
-    </item>
-    
-    <item>
       <title>広告枠IDの取得</title>
       <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

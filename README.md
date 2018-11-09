@@ -8,7 +8,7 @@ Install with CocoaPods by adding the following to your Podfile:
 
 
 ```
-pod 'RFP-iOS-SDK', '~> 2.7.0'
+pod 'RFP-iOS-SDK', '~> 2.8.1'
 ```
 
 ### Carthage
@@ -17,7 +17,7 @@ Install with Carthage by adding the following to your Cartfile:
 
 
 ```
-github "fout/RFP-iOS-SDK" ~> 2.7.0
+binary "https://raw.githubusercontent.com/fout/RFP-iOS-SDK/master/RFP-iOS-SDK.json" 
 ```
 
 Run `carthage update `to build the framework and link against `RFP.framework`.
