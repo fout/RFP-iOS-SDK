@@ -83,7 +83,7 @@ class RFPTableViewAdCell: UITableViewCell, RFPTableViewAdCellProtocol {
         )
         RunLoop.current.add(
             self.timer!,
-            forMode: RunLoopMode.commonModes
+            forMode: RunLoop.Mode.common
         )
     }
 

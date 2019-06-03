@@ -17,7 +17,7 @@ class RFPImageAdCell: RFPTableViewAdCell {
 
     @IBOutlet weak var containerView: UIImageView!
 
-    open static let fixedHeight: CGFloat = 320
+    public static let fixedHeight: CGFloat = 320
 
     override func awakeFromNib() {
         super.awakeFromNib()

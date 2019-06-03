@@ -47,12 +47,30 @@
     </item>
     
     <item>
-      <title>HTTPリクエストのタイムアウト間隔設定</title>
+      <title>GIF広告への対応</title>
       <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_6/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_6/</guid>
+      <description>GIF広告の判定 GIF広告の表示 UIImageViewはアニメーションGIFを再生できないため、GIF広告を表示したい利用者にGIFデータを</description>
+    </item>
+    
+    <item>
+      <title>HTTPリクエストのタイムアウト間隔設定</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_7/</guid>
       <description>HTTPリクエストのタイムアウト間隔設定 HTTPリクエストのタイムアウト間隔の設定 (v2.6.0以上利用可能) RFP.rfpSetHttpR</description>
+    </item>
+    
+    <item>
+      <title>エラーコード一覧</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_8/</guid>
+      <description>カスタムインフィード広告のロードと各種通知時のイベント取得を利用してイベントを受け取る際のエラー詳細についての説明です。 エラーコード 説明 1000 対</description>
     </item>
     
   </channel>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="js csstransforms3d">
+<html lang="ja" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 
-    <title>Support for video advertising :: RFP-iOS-SDK Docs</title>
+    <title>HTTPリクエストのタイムアウト間隔設定 :: RFP-iOS-SDK Docs</title>
     
     
     <link href="/RFP-iOS-SDK/css/nucleus.css?1559546010" rel="stylesheet">
@@ -35,14 +35,14 @@
     </style>
     
   </head>
-  <body class="" data-url="/RFP-iOS-SDK/en/programming-guide/2_5/">
+  <body class="" data-url="/RFP-iOS-SDK/programming-guide/2_7/">
     <nav id="sidebar" class="">
 
 
 
   <div id="header-wrapper">
     <div id="header">
-      <a id="logo" href="https://fout.github.io/RFP-iOS-SDK/en">
+      <a id="logo" href="https://fout.github.io/RFP-iOS-SDK/ja">
     RFP-iOS-SDK Docs
 </a>
 
@@ -50,7 +50,7 @@
     
         <div class="searchbox">
     <label for="search-by"><i class="fa fa-search"></i></label>
-    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <input data-search-input id="search-by" type="text" placeholder="検索">
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
@@ -58,7 +58,7 @@
 <script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1559546010"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/RFP-iOS-SDK\/en";
+        var baseurl = "\/RFP-iOS-SDK\/";
     
 </script>
 <script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1559546010"></script>
@@ -77,13 +77,13 @@
  
   
     
-    <li data-nav-id="/RFP-iOS-SDK/en/quick-start/" title="Quick Start" class="dd-item 
+    <li data-nav-id="/RFP-iOS-SDK/quick-start/" title="クイックスタート" class="dd-item 
         
         
         
         ">
-      <a href="/RFP-iOS-SDK/en/quick-start/">
-          <b>1. </b>Quick Start
+      <a href="/RFP-iOS-SDK/quick-start/">
+          <b>1. </b>クイックスタート
           
       </a>
       
@@ -99,13 +99,13 @@
  
   
     
-    <li data-nav-id="/RFP-iOS-SDK/en/installation-guide/" title="Installation Guide" class="dd-item 
+    <li data-nav-id="/RFP-iOS-SDK/installation-guide/" title="インストールガイド" class="dd-item 
         
         
         
         ">
-      <a href="/RFP-iOS-SDK/en/installation-guide/">
-          <b>2. </b>Installation Guide
+      <a href="/RFP-iOS-SDK/installation-guide/">
+          <b>2. </b>インストールガイド
           
       </a>
       
@@ -121,13 +121,13 @@
  
   
     
-    <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/" title="Programming Guide" class="dd-item 
+    <li data-nav-id="/RFP-iOS-SDK/programming-guide/" title="プログラミングガイド" class="dd-item 
         parent
         
         
         ">
-      <a href="/RFP-iOS-SDK/en/programming-guide/">
-          <b>3. </b>Programming Guide
+      <a href="/RFP-iOS-SDK/programming-guide/">
+          <b>3. </b>プログラミングガイド
           
       </a>
       
@@ -146,9 +146,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_2/" title="Acquisition of advertising framework ID" class="dd-item ">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_2/">
-        Acquisition of advertising framework ID
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_2/" title="広告枠IDの取得" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_2/">
+        広告枠IDの取得
         
         </a>
     </li>
@@ -165,9 +165,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_3/" title="Simple infeed advertising" class="dd-item ">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_3/">
-        Simple infeed advertising
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_3/" title="簡易版インフィード広告" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_3/">
+        簡易版インフィード広告
         
         </a>
     </li>
@@ -184,9 +184,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising" class="dd-item ">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_4/">
-        Customized In-Feed advertising
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_4/" title="カスタムインフィード広告" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_4/">
+        カスタムインフィード広告
         
         </a>
     </li>
@@ -203,9 +203,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_5/" title="Support for video advertising" class="dd-item active">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_5/">
-        Support for video advertising
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_5/" title="動画広告への対応" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_5/">
+        動画広告への対応
         
         </a>
     </li>
@@ -222,9 +222,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_8/" title="Error code description" class="dd-item ">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_8/">
-        Error code description
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_6/" title="GIF広告への対応" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_6/">
+        GIF広告への対応
         
         </a>
     </li>
@@ -241,9 +241,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_7/" title="Set HTTP request timeout interval" class="dd-item ">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_7/">
-        Set HTTP request timeout interval
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_7/" title="HTTPリクエストのタイムアウト間隔設定" class="dd-item active">
+        <a href="/RFP-iOS-SDK/programming-guide/2_7/">
+        HTTPリクエストのタイムアウト間隔設定
         
         </a>
     </li>
@@ -260,9 +260,9 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_6/" title="Support for GIF advertising" class="dd-item ">
-        <a href="/RFP-iOS-SDK/en/programming-guide/2_6/">
-        Support for GIF advertising
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_8/" title="エラーコード一覧" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_8/">
+        エラーコード一覧
         
         </a>
     </li>
@@ -286,12 +286,12 @@
  
   
     
-    <li data-nav-id="/RFP-iOS-SDK/en/faq/" title="FAQ" class="dd-item 
+    <li data-nav-id="/RFP-iOS-SDK/faq/" title="FAQ" class="dd-item 
         
         
         
         ">
-      <a href="/RFP-iOS-SDK/en/faq/">
+      <a href="/RFP-iOS-SDK/faq/">
           <b>4. </b>FAQ
           
       </a>
@@ -308,12 +308,12 @@
  
   
     
-    <li data-nav-id="/RFP-iOS-SDK/en/changelog/" title="CHANGELOG" class="dd-item 
+    <li data-nav-id="/RFP-iOS-SDK/changelog/" title="CHANGELOG" class="dd-item 
         
         
         
         ">
-      <a href="/RFP-iOS-SDK/en/changelog/">
+      <a href="/RFP-iOS-SDK/changelog/">
           <b>5. </b>CHANGELOG
           
       </a>
@@ -359,7 +359,7 @@
                   
                     
                     
-                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_5/">日本語</option>
+                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_7/" selected>日本語</option>
                     
                   
               
@@ -373,7 +373,7 @@
                   
                     
                     
-                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_5/" selected>English</option>
+                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_7/">English</option>
                     
                   
               
@@ -438,7 +438,7 @@
             
           
           
-            <a href='/RFP-iOS-SDK/en/'>TOP</a> > <a href='/RFP-iOS-SDK/en/programming-guide/'>Programming Guide</a> > Support for video advertising
+            <a href='/RFP-iOS-SDK/'>TOP</a> > <a href='/RFP-iOS-SDK/programming-guide/'>プログラミングガイド</a> > HTTPリクエストのタイムアウト間隔設定
           
          
           
@@ -456,21 +456,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#components-provided-with-the-video-advertisement-sdk">Components provided with the video advertisement SDK</a></li>
-<li><a href="#judgment-of-video-advertisement">Judgment of video advertisement</a></li>
-<li><a href="#delegate-method-used-with-video-advertisements">Delegate method used with video advertisements</a></li>
-<li><a href="#acquiring-video-advertisements">Acquiring video advertisements</a>
+<li><a href="#httpリクエストのタイムアウト間隔の設定">HTTPリクエストのタイムアウト間隔の設定</a>
 <ul>
-<li><a href="#specifying-viewcontrollerforpresentingmodalview">Specifying viewControllerForPresentingModalView</a></li>
+<li><a href="#タイムアウト間隔設定時の注意点">タイムアウト間隔設定時の注意点</a></li>
 </ul></li>
-<li><a href="#playback-preparation-complete">Playback preparation complete</a></li>
-<li><a href="#playing-the-video">Playing the video</a></li>
-<li><a href="#end-playback">End playback</a></li>
-<li><a href="#cache-settings">Cache settings</a>
-<ul>
-<li><a href="#points-to-note-when-setting-the-cache">Points to note when setting the cache</a></li>
-</ul></li>
-<li><a href="#setting-the-tap-action">Setting the tap action</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -486,7 +475,7 @@
         
         <div id="body-inner">
           
-            <h1>Support for video advertising</h1>
+            <h1>HTTPリクエストのタイムアウト間隔設定</h1>
           
 
         
@@ -494,210 +483,39 @@
 
 
 
-<p>※ Currently video advertisements can only be used by limited partners</p>
-
 <ul>
-<li><a href="#infeed/video/feature">Components provided in the video advertising SDK</a></li>
-<li><a href="#infeed/video/judge">Video advertisement judgment</a></li>
-<li><a href="#infeed/video/delegate">Used with video advertising Delegate method</a></li>
-<li><a href="#infeed/video/init">Acquiring video advertisements</a></li>
-<li><a href="#infeed/video/readytoplay">Playback preparation complete</a></li>
-<li><a href="#infeed/video/play">Playing videos</a></li>
-<li><a href="#infeed/video/didplaytoend">End playback</a></li>
-<li><a href="#infeed/video/cache">Setting the cache</a></li>
-<li><a href="#infeed/video/tapped">Setting the tap action</a></li>
+<li><a href="#timeout">HTTPリクエストのタイムアウト間隔設定</a></li>
 </ul>
 
-<p><a name="infeed/video/feature"></a></p>
+<p><a name="timeout"></a></p>
 
-<h3 id="components-provided-with-the-video-advertisement-sdk">Components provided with the video advertisement SDK</h3>
+<h3 id="httpリクエストのタイムアウト間隔の設定">HTTPリクエストのタイムアウト間隔の設定</h3>
 
-<ul>
-<li><code>RFPPlayerControl</code>
+<p>(<strong>v2.6.0以上利用可能</strong>)</p>
 
-<ul>
-<li>This is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</li>
-</ul></li>
-</ul>
-
-<p><a name="infeed/video/judge"></a></p>
-
-<h3 id="judgment-of-video-advertisement">Judgment of video advertisement</h3>
-
-<p>In the case of a video advertisement, <code>RFPInstreamInfoModel.isVideo()</code> is returned as <code>true</code>. This can be used to judge whether it is a video advertisement or not.</p>
-
-<p><a name="infeed/video/delegate"></a></p>
-
-<h3 id="delegate-method-used-with-video-advertisements">Delegate method used with video advertisements</h3>
-
-<p>There are two RFPInstreamAdLoaderDelegate methods used with video advertising.</p>
-
-<ul>
-<li><p><code>viewControllerForPresentingModalView</code></p>
-
-<ul>
-<li>Return the calling source ViewController. This is compulsory when playing back video advertisements.</li>
-</ul></li>
-
-<li><p><code>readyToPlay(with playerControl: RFPPlayerControl!)</code></p>
-
-<ul>
-<li>Called when playback preparation is complete. Note that this is not played back even if <code>playerControl.play()</code> is executed before preparations are complete.</li>
-</ul></li>
-</ul>
-
-<p><a name="infeed/video/init"></a></p>
-
-<h3 id="acquiring-video-advertisements">Acquiring video advertisements</h3>
-
-<p><code>instreamAdLoader.getVideoControl(withFrame:infoModel:)</code> Can use to acquire <code>RFPPlayerControl</code>.</p>
-
-<h4 id="specifying-viewcontrollerforpresentingmodalview">Specifying viewControllerForPresentingModalView</h4>
-
-<p>In the case of Video playback, be sure to specify <code>RFPInstreamAdLoaderDelegate.viewControllerForPresentingModalView</code>.</p>
-
-<p>This is necessary when switching the video to Fullscreen.</p>
-
-<p>For the return value, specify the calling source UIViewController.</p>
-
-<pre><code class="language-:swift">func rfpInstreamAdLoaderDidFinishLoadingAd(withReturn instreamAdLoader: RFPInstreamAdLoader!, instreamInfoModels: [Any]!) {
-
-    // Acquiring In-Feed advertisement information
-    for model: RFPInstreamInfoModel in instreamInfoModels as! [RFPInstreamInfoModel] {
-        if (model.isVideo()) {
-            // Acquiring RFPPlayerControl
-            let playerControl = instreamAdLoader.getVideoControl(withFrame: containerView.bounds, infoModel: model)!
-            // Do not set other than playerUiView
-            containerView.subviews.forEach { subview in
-                subview.removeFromSuperview()
-            }
-            containerView.addSubview(playerControl)
-        }
-    }
-}
-
-// ※ Mandatory in case of video advertisement playback
-func viewControllerForPresentingModalView() -&gt; UIViewController! {
-    return self
-}
-</code></pre>
-
-<p><a name="infeed/video/readytoplay"></a></p>
-
-<h3 id="playback-preparation-complete">Playback preparation complete</h3>
-
-<p>When playback preparation is complete, <code>RFPInstreamAdLoaderDelegate.readyToPlay(with:)</code> is called.</p>
-
-<p>The initial state of the player is a paused state.</p>
-
-<pre><code class="language-:swift">func readyToPlay(with playerControl: RFPPlayerControl!) {
-    // Playback
-    playerControl.play()
-    // Pause
-    playerControl.pause()
-}
-</code></pre>
-
-<p><a name="infeed/video/play"></a></p>
-
-<h3 id="playing-the-video">Playing the video</h3>
-
-<p>Start playback using <code>RFPPlayerControl.play()</code>.</p>
-
-<p>It is possible to pause using <code>RFPPlayerControl.pause()</code>.</p>
-
-<pre><code class="language-:swift">    // Playback
-    playerControl.play()
-    // Pause
-    playerControl.pause()
-</code></pre>
-
-<p><a name="infeed/video/didplaytoend"></a></p>
-
-<h3 id="end-playback">End playback</h3>
-
-<p>(<strong>Can be used on v2.7.0 or later</strong>)</p>
-
-<p>When playback is ended,<code>RFPInstreamAdLoaderDelegate.didPlayToEndTime(with:)</code> is called.</p>
-
-<pre><code class="language-:swift">func didPlayToEndTime(with playerControl: RFPPlayerControl!) {
-    // for playback ended
-}
-</code></pre>
-
-<p><a name="infeed/video/cache"></a></p>
-
-<h3 id="cache-settings">Cache settings</h3>
-
-<p>(<strong>Can be used on v2.5.0 or later, iOS10 or later</strong>)</p>
-
-<p>In the RFP, video advertisements are cached to a certain extent in the internal storage of the terminal (HLS download storage), and this reduces communication volume and improves the video advertisement playback response.</p>
-
-<p>The setting values recommended by the RFP are used for the cache capacity. This value can be changed from the app side.</p>
-
-<p>When changing the cache capacity, use the <code>RFP.rfpSetVideoCacheSize(_:)</code> to set the cache capacity.</p>
+<p><code>RFP.rfpSetHttpRequestTimeoutInterval(_:)</code>を利用することで、SDKのHTTPタイムアウト値を設定することが可能です</p>
 
 <pre><code class="language-:swift">func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
 
-    // Acquire current setting value
-    let size = RFP.rfpGetVideoCacheSize()
+    // HTTP requestのタイムアウトを15秒にする
+    RFP.rfpSetHttpRequestTimeoutInterval(15)
 
-    //Set the video cache to 100 MB.
-    RFP.rfpSetVideoCacheSize(100);
-
-    // Disable the video cache
-    RFP.rfpSetVideoCacheSize(0);
-
-    // ※ Be sure to set the rfpSetVideoCacheSize before rfpInitMedia
+    // ※ rfpSetHttpRequestTimeoutIntervalは必ずrfpInitMediaの前に設定をしてください
     RFP.rfpInitMedia(&quot;your_media_id&quot;)
+
+    // 現在の設定値を取得
+    let timeoutInterval = RFP.rfpGetHttpRequestTimeoutInterval()
+    // ...
 }
 </code></pre>
 
-<h4 id="points-to-note-when-setting-the-cache">Points to note when setting the cache</h4>
-
-<p>*In iOS11 or later, the cached video advertisements are displayed with the name”<code>video_ad_cache_rfp</code>” under ‘[Settings]’&gt;’[General]’&gt;<code>[iPhone storage]</code>&gt;<code>{each app name}</code>. This cached file can be deleted at any time by the user.
-* The cache is cleared at the time <code>rfpInitMedia</code> is called. For this reason, the cache capacity temporarily set in <code>rfpSetVideoCacheSize</code> may be exceeded.</p>
-
-<p><a name="infeed/video/tapped"></a></p>
-
-<h3 id="setting-the-tap-action">Setting the tap action</h3>
-
-<p>(<strong>Can be used on v2.7.0 or later</strong>)</p>
-
-<p>Set action when player is tapped.The default is Fullscreen.</p>
+<h4 id="タイムアウト間隔設定時の注意点">タイムアウト間隔設定時の注意点</h4>
 
 <ul>
-<li><code>RFPPlayerControl.setTapActionFullscreen</code>
+<li><p>極めて短い間隔を設定すると広告を取得できない可能性がありますので、使用状況に合わせて設定してください。</p></li>
 
-<ul>
-<li>Start Fullscreen. This is the default behavior.</li>
-</ul></li>
-<li><code>RFPPlayerControl.setTapActionAdClick</code>
-
-<ul>
-<li>It becomes the operation of ad click. Playback will be stopped.</li>
-</ul></li>
-<li><code>RFPPlayerControl.replaceTapAction:</code>
-
-<ul>
-<li>You can set arbitrary processing.</li>
-</ul></li>
+<li><p>システム最大値を超えた値が設定された場合、システム最大値が適用されます。</p></li>
 </ul>
-
-<pre><code class="language-:swift">// for Fullscreen
-playerControl.setTapActionFullscreen()
-
-// for Ad click
-playerControl.setTapActionAdClick()
-
-// for arbitrary processing
-playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
-    if let weakPlayer = playerControl {
-        // ex) pause
-        weakPlayer.pause()
-    }
-})
-</code></pre>
 
 
 <footer class=" footline" >
@@ -836,26 +654,6 @@ playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -888,6 +686,26 @@ playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -941,10 +759,10 @@ playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
 
 
         
-            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/programming-guide/2_6/" title="GIF広告への対応"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/RFP-iOS-SDK/en/programming-guide/2_8/" title="Error code description" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/RFP-iOS-SDK/programming-guide/2_8/" title="エラーコード一覧" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

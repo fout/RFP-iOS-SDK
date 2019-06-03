@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageIO
 
 class FeedTableViewController: UITableViewController
     , RFPInstreamAdLoaderDelegate
@@ -312,18 +313,79 @@ class FeedTableViewController: UITableViewController
         )
 
         // image
-        let imageView = UIImageView(frame: cell.containerView.bounds)
-        imageView.contentMode = .scaleAspectFill
-        instreamInfoModel.rfpLoadImage(imageView, completion: { (error: Error?) -> Void in
-            if error != nil {
-                print("rfpLoadImage error", error!)
-            } else {
-                cell.containerView.addSubview(imageView)
-                cell.startTimer()
+        URLSession.shared.dataTask(with: URLRequest(url: instreamInfoModel.imageURL!)) { (data, response, error) in
+            guard let data = data, let response = response as? HTTPURLResponse, error == nil else {
+                return
             }
-        })
-
+            DispatchQueue.main.async(execute: {
+                cell.containerView.subviews.forEach { subview in
+                    subview.removeFromSuperview()
+                }
+                //check if image is gif
+                if (response.mimeType == "image/gif") {
+                    guard let imageView = self.createGifImageFromData(data: data as NSData, bounds: cell.containerView.bounds) else {return}
+                    cell.indexPath = indexPath
+                    cell.containerView.addSubview(imageView)
+                    imageView.startAnimating()
+                    cell.startTimer()
+                } else {
+                    let imageView = UIImageView(frame: cell.containerView.bounds)
+                    imageView.contentMode = .scaleAspectFit
+                    imageView.image = UIImage(data: data)
+                    cell.indexPath = indexPath
+                    cell.containerView.addSubview(imageView)
+                    cell.startTimer()
+                }
+            })
+            }.resume()
         return cell;
+    }
+
+    func createGifImageFromData (data : NSData, bounds : CGRect) -> UIImageView?  {
+        guard let gifImagesSource = CGImageSourceCreateWithData(data as CFData, nil) else {return nil}
+        //gif image's count
+        let gifImagesCount = CGImageSourceGetCount(gifImagesSource)
+        var gifImagesArray = [UIImage]()
+        var totalDuration : Float = 0
+        let imageView = UIImageView(frame: bounds)
+
+        for i in 0 ..< gifImagesCount {
+            guard let cgImage = CGImageSourceCreateImageAtIndex(gifImagesSource, i, nil) else { continue }
+            let image = UIImage(cgImage: cgImage)
+            if i == 0 {
+                imageView.image = image
+            }
+            gifImagesArray.append(image)
+
+            // Frame default duration
+            var frameDuration : Float = 0.1;
+            guard let properties = CGImageSourceCopyPropertiesAtIndex(gifImagesSource, i, nil) else {
+                totalDuration += frameDuration
+                continue }
+            guard let gifDict = (properties as NSDictionary)[kCGImagePropertyGIFDictionary] as? NSDictionary else {
+                totalDuration += frameDuration
+                continue }
+
+            if let delayTimeUnclampedProp = gifDict[kCGImagePropertyGIFUnclampedDelayTime as String] as? NSNumber {
+                frameDuration = delayTimeUnclampedProp.floatValue
+            } else {
+                if let delayTimeProp = gifDict[kCGImagePropertyGIFDelayTime as String] as? NSNumber {
+                    frameDuration = delayTimeProp.floatValue
+                }
+            }
+            // Make sure its not too small
+            if frameDuration < 0.01 {
+                frameDuration = 0.1;
+            }
+            totalDuration += frameDuration
+        }
+        imageView.animationImages = gifImagesArray
+        imageView.animationDuration = TimeInterval(totalDuration)
+        //loop gif
+        imageView.animationRepeatCount = 0
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(data: data as Data)
+        return imageView
     }
 
     @objc func actionButtonTapped(_ sender: UIButton, _ event: UIEvent) {

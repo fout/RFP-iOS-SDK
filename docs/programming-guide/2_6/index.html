@@ -10,22 +10,22 @@
     <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 
-    <title>HTTPリクエストのタイムアウト間隔設定 :: RFP-iOS-SDK Docs</title>
+    <title>GIF広告への対応 :: RFP-iOS-SDK Docs</title>
     
     
-    <link href="/RFP-iOS-SDK/css/nucleus.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hybrid.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/auto-complete.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/theme.css?1542101043" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1542101043" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1559546010" rel="stylesheet">
     
-      <link href="/RFP-iOS-SDK/css/theme-blue.css?1542101043" rel="stylesheet">
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1559546010" rel="stylesheet">
     
 
-    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1542101043"></script>
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1559546010"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1542101043"></script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1542101043"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1559546010"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1559546010"></script>
 <script type="text/javascript">
     
         var baseurl = "\/RFP-iOS-SDK\/";
     
 </script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1542101043"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1559546010"></script>
 
     
   </div>
@@ -222,9 +222,47 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_6/" title="HTTPリクエストのタイムアウト間隔設定" class="dd-item active">
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_6/" title="GIF広告への対応" class="dd-item active">
         <a href="/RFP-iOS-SDK/programming-guide/2_6/">
+        GIF広告への対応
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_7/" title="HTTPリクエストのタイムアウト間隔設定" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_7/">
         HTTPリクエストのタイムアウト間隔設定
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/programming-guide/2_8/" title="エラーコード一覧" class="dd-item ">
+        <a href="/RFP-iOS-SDK/programming-guide/2_8/">
+        エラーコード一覧
         
         </a>
     </li>
@@ -400,7 +438,7 @@
             
           
           
-            <a href='/RFP-iOS-SDK/'>TOP</a> > <a href='/RFP-iOS-SDK/programming-guide/'>プログラミングガイド</a> > HTTPリクエストのタイムアウト間隔設定
+            <a href='/RFP-iOS-SDK/'>TOP</a> > <a href='/RFP-iOS-SDK/programming-guide/'>プログラミングガイド</a> > GIF広告への対応
           
          
           
@@ -418,10 +456,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#httpリクエストのタイムアウト間隔の設定">HTTPリクエストのタイムアウト間隔の設定</a>
-<ul>
-<li><a href="#タイムアウト間隔設定時の注意点">タイムアウト間隔設定時の注意点</a></li>
-</ul></li>
+<li><a href="#gif広告の判別">GIF広告の判別</a></li>
+<li><a href="#gif広告の表示">GIF広告の表示</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -437,7 +473,7 @@
         
         <div id="body-inner">
           
-            <h1>HTTPリクエストのタイムアウト間隔設定</h1>
+            <h1>GIF広告への対応</h1>
           
 
         
@@ -446,38 +482,96 @@
 
 
 <ul>
-<li><a href="#timeout">HTTPリクエストのタイムアウト間隔設定</a></li>
+<li><a href="#judgegif">GIF広告の判定</a></li>
+<li><a href="#showgif">GIF広告の表示</a></li>
 </ul>
 
-<p><a name="timeout"></a></p>
-
-<h3 id="httpリクエストのタイムアウト間隔の設定">HTTPリクエストのタイムアウト間隔の設定</h3>
-
-<p>(<strong>v2.6.0以上利用可能</strong>)</p>
-
-<p><code>RFP.rfpSetHttpRequestTimeoutInterval(_:)</code>を利用することで、SDKのHTTPタイムアウト値を設定することが可能です</p>
-
-<pre><code class="language-:swift">func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
-
-    // HTTP requestのタイムアウトを15秒にする
-    RFP.rfpSetHttpRequestTimeoutInterval(15)
-
-    // ※ rfpSetHttpRequestTimeoutIntervalは必ずrfpInitMediaの前に設定をしてください
-    RFP.rfpInitMedia(&quot;your_media_id&quot;)
-
-    // 現在の設定値を取得
-    let timeoutInterval = RFP.rfpGetHttpRequestTimeoutInterval()
-    // ...
-}
-</code></pre>
-
-<h4 id="タイムアウト間隔設定時の注意点">タイムアウト間隔設定時の注意点</h4>
+<p>UIImageViewはアニメーションGIFを再生できないため、GIF広告を表示したい利用者にGIFデータを再生する方法を紹介します。</p>
 
 <ul>
-<li><p>極めて短い間隔を設定すると広告を取得できない可能性がありますので、使用状況に合わせて設定してください。</p></li>
-
-<li><p>システム最大値を超えた値が設定された場合、システム最大値が適用されます。</p></li>
+<li>下記の方法と他に、<a href="https://github.com/swiftgif/SwiftGif">SwiftGif</a>のようなライブラリを利用することも可能です。</li>
 </ul>
+
+<p><a name="judgegif"></a></p>
+
+<h3 id="gif広告の判別">GIF広告の判別</h3>
+
+<p><a href="../2_4/#infeed/custom/param">カスタムインフィード広告パラメータ</a>にあるプロパティ <code>imageURL</code> による画像データをロードする際に、レスポンスの
+ <code>mimeType</code> は<code>image/gif</code>によって画像データがGIFかどうかを判別することができます。</p>
+
+<pre><code class="language-:swift">        URLSession.shared.dataTask(with: URLRequest(url: instreamInfoModel.imageURL!)) { (data, response, error) in
+            guard let data = data, let response = response as? HTTPURLResponse, error == nil else {
+                return
+            }
+            DispatchQueue.main.async(execute: {
+                if (response.mimeType == &quot;image/gif&quot;) {
+                    //GIFと判別
+                } else {
+                }
+            })
+            }.resume()
+</code></pre>
+
+<p><a name="showgif"></a></p>
+
+<h3 id="gif広告の表示">GIF広告の表示</h3>
+
+<p><a href="https://developer.apple.com/documentation/imageio">Image I/0</a>を利用してデータからイメージソース抽出して<code>animationImages</code> で再生することが可能です。
+広告の実装例を挙げます。</p>
+
+<pre><code class="language-:swift">    //imageViewをsubViewとして追加し、imageViewのstartAnimating()をコールしてください
+    guard let imageView = self.createGifImageFromData(data: data as NSData, bounds: yourView.containerView.bounds) else {return}
+    yourView.containerView.addSubview(imageView)
+    imageView.startAnimating()
+
+    func createGifImageFromData (data : NSData, bounds : CGRect) -&gt; UIImageView?  {
+        guard let gifImagesSource = CGImageSourceCreateWithData(data as CFData, nil) else {return nil}
+        //GIF画像の枚数
+        let gifImagesCount = CGImageSourceGetCount(gifImagesSource)
+        var gifImagesArray = [UIImage]()
+        var totalDuration : TimeInterval = 0
+        let imageView = UIImageView(frame: bounds)
+
+        for i in 0 ..&lt; gifImagesCount {
+            guard let cgImage = CGImageSourceCreateImageAtIndex(gifImagesSource, i, nil) else { continue }
+            let image = UIImage(cgImage: cgImage)
+            if i == 0 {
+                imageView.image = image
+            }
+            gifImagesArray.append(image)
+
+            // Durationのデフォルト値
+            var frameDuration : Float = 0.1;
+            guard let properties = CGImageSourceCopyPropertiesAtIndex(gifImagesSource, i, nil) else {
+                totalDuration += frameDuration
+                continue }
+            guard let gifDict = (properties as NSDictionary)[kCGImagePropertyGIFDictionary] as? NSDictionary else {
+                totalDuration += frameDuration
+                continue }
+            if let delayTimeUnclampedProp = gifDict[kCGImagePropertyGIFUnclampedDelayTime as String] as? NSNumber {
+                frameDuration = delayTimeUnclampedProp.floatValue
+            } else {
+                if let delayTimeProp = gifDict[kCGImagePropertyGIFDelayTime as String] as? NSNumber {
+                    frameDuration = delayTimeProp.floatValue
+                }
+            }
+            // 小さすぎないように
+            if frameDuration &lt; 0.01 {
+                frameDuration = 0.1;
+            }
+            totalDuration += frameDuration
+        }
+        imageView.animationImages = gifImagesArray
+        // 画像ごとの表示時間が同じ
+        imageView.animationDuration = TimeInterval(totalDuration)
+        // GIFのループを無限とする
+        imageView.animationRepeatCount = 0
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(data: data as Data)
+        return imageView
+    }
+}
+</code></pre>
 
 
 <footer class=" footline" >
@@ -644,6 +738,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -652,8 +762,24 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
-                        
+            
+            
+                
                     
                 
                 
@@ -692,7 +818,7 @@
             <a class="nav nav-prev" href="/RFP-iOS-SDK/programming-guide/2_5/" title="動画広告への対応"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/RFP-iOS-SDK/faq/" title="FAQ" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/RFP-iOS-SDK/programming-guide/2_7/" title="HTTPリクエストのタイムアウト間隔設定" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -701,20 +827,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1542101043"></script>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1559546010"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/learn.js?1542101043"></script>
-    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1542101043"></script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1559546010"></script>
 
-    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1542101043" type="text/css" rel="stylesheet" />
-    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1542101043"></script>
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1559546010" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1559546010"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

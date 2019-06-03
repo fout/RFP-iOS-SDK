@@ -13,7 +13,7 @@ class RFPContentCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var container: UIView!
 
-    open static let fixedHeight: CGFloat = 200
+    public static let fixedHeight: CGFloat = 200
 
     override func prepareForReuse() {
         super.prepareForReuse()

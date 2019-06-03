@@ -17,7 +17,7 @@ class RFPVideoAdCell: RFPTableViewAdCell {
 
     @IBOutlet weak var containerView: UIView!
 
-    open static let fixedHeight: CGFloat = 320
+    public static let fixedHeight: CGFloat = 320
 
     enum PlayerStatus: Int {
         case ready

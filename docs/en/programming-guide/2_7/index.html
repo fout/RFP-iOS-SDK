@@ -10,7 +10,7 @@
     <link rel="shortcut icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="https://fout.github.io/RFP-iOS-SDK//images/favicon.png" type="image/x-icon" />
 
-    <title>Support for video advertising :: RFP-iOS-SDK Docs</title>
+    <title>Set HTTP request timeout interval :: RFP-iOS-SDK Docs</title>
     
     
     <link href="/RFP-iOS-SDK/css/nucleus.css?1559546010" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/RFP-iOS-SDK/en/programming-guide/2_5/">
+  <body class="" data-url="/RFP-iOS-SDK/en/programming-guide/2_7/">
     <nav id="sidebar" class="">
 
 
@@ -203,7 +203,7 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_5/" title="Support for video advertising" class="dd-item active">
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_5/" title="Support for video advertising" class="dd-item ">
         <a href="/RFP-iOS-SDK/en/programming-guide/2_5/">
         Support for video advertising
         
@@ -241,7 +241,7 @@
  
   
     
-      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_7/" title="Set HTTP request timeout interval" class="dd-item ">
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_7/" title="Set HTTP request timeout interval" class="dd-item active">
         <a href="/RFP-iOS-SDK/en/programming-guide/2_7/">
         Set HTTP request timeout interval
         
@@ -359,7 +359,7 @@
                   
                     
                     
-                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_5/">日本語</option>
+                      <option id="ja" value="/RFP-iOS-SDK/programming-guide/2_7/">日本語</option>
                     
                   
               
@@ -373,7 +373,7 @@
                   
                     
                     
-                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_5/" selected>English</option>
+                      <option id="en" value="/RFP-iOS-SDK/en/programming-guide/2_7/" selected>English</option>
                     
                   
               
@@ -438,7 +438,7 @@
             
           
           
-            <a href='/RFP-iOS-SDK/en/'>TOP</a> > <a href='/RFP-iOS-SDK/en/programming-guide/'>Programming Guide</a> > Support for video advertising
+            <a href='/RFP-iOS-SDK/en/'>TOP</a> > <a href='/RFP-iOS-SDK/en/programming-guide/'>Programming Guide</a> > Set HTTP request timeout interval
           
          
           
@@ -456,21 +456,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#components-provided-with-the-video-advertisement-sdk">Components provided with the video advertisement SDK</a></li>
-<li><a href="#judgment-of-video-advertisement">Judgment of video advertisement</a></li>
-<li><a href="#delegate-method-used-with-video-advertisements">Delegate method used with video advertisements</a></li>
-<li><a href="#acquiring-video-advertisements">Acquiring video advertisements</a>
+<li><a href="#set-http-request-timeout-interval">Set HTTP request timeout interval</a>
 <ul>
-<li><a href="#specifying-viewcontrollerforpresentingmodalview">Specifying viewControllerForPresentingModalView</a></li>
+<li><a href="#points-to-note-when-setting-the-timeout-interval">Points to note when setting the timeout interval</a></li>
 </ul></li>
-<li><a href="#playback-preparation-complete">Playback preparation complete</a></li>
-<li><a href="#playing-the-video">Playing the video</a></li>
-<li><a href="#end-playback">End playback</a></li>
-<li><a href="#cache-settings">Cache settings</a>
-<ul>
-<li><a href="#points-to-note-when-setting-the-cache">Points to note when setting the cache</a></li>
-</ul></li>
-<li><a href="#setting-the-tap-action">Setting the tap action</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -486,7 +475,7 @@
         
         <div id="body-inner">
           
-            <h1>Support for video advertising</h1>
+            <h1>Set HTTP request timeout interval</h1>
           
 
         
@@ -494,210 +483,39 @@
 
 
 
-<p>※ Currently video advertisements can only be used by limited partners</p>
-
 <ul>
-<li><a href="#infeed/video/feature">Components provided in the video advertising SDK</a></li>
-<li><a href="#infeed/video/judge">Video advertisement judgment</a></li>
-<li><a href="#infeed/video/delegate">Used with video advertising Delegate method</a></li>
-<li><a href="#infeed/video/init">Acquiring video advertisements</a></li>
-<li><a href="#infeed/video/readytoplay">Playback preparation complete</a></li>
-<li><a href="#infeed/video/play">Playing videos</a></li>
-<li><a href="#infeed/video/didplaytoend">End playback</a></li>
-<li><a href="#infeed/video/cache">Setting the cache</a></li>
-<li><a href="#infeed/video/tapped">Setting the tap action</a></li>
+<li><a href="#timeout">Set HTTP request timeout interval</a></li>
 </ul>
 
-<p><a name="infeed/video/feature"></a></p>
+<p><a name="timeout"></a></p>
 
-<h3 id="components-provided-with-the-video-advertisement-sdk">Components provided with the video advertisement SDK</h3>
+<h3 id="set-http-request-timeout-interval">Set HTTP request timeout interval</h3>
 
-<ul>
-<li><code>RFPPlayerControl</code>
+<p>(<strong>Can be used on v2.6.0 or later</strong>)</p>
 
-<ul>
-<li>This is the UI view displaying the video player. This provides a function to control the video. Insert any UIView as a Subview.</li>
-</ul></li>
-</ul>
-
-<p><a name="infeed/video/judge"></a></p>
-
-<h3 id="judgment-of-video-advertisement">Judgment of video advertisement</h3>
-
-<p>In the case of a video advertisement, <code>RFPInstreamInfoModel.isVideo()</code> is returned as <code>true</code>. This can be used to judge whether it is a video advertisement or not.</p>
-
-<p><a name="infeed/video/delegate"></a></p>
-
-<h3 id="delegate-method-used-with-video-advertisements">Delegate method used with video advertisements</h3>
-
-<p>There are two RFPInstreamAdLoaderDelegate methods used with video advertising.</p>
-
-<ul>
-<li><p><code>viewControllerForPresentingModalView</code></p>
-
-<ul>
-<li>Return the calling source ViewController. This is compulsory when playing back video advertisements.</li>
-</ul></li>
-
-<li><p><code>readyToPlay(with playerControl: RFPPlayerControl!)</code></p>
-
-<ul>
-<li>Called when playback preparation is complete. Note that this is not played back even if <code>playerControl.play()</code> is executed before preparations are complete.</li>
-</ul></li>
-</ul>
-
-<p><a name="infeed/video/init"></a></p>
-
-<h3 id="acquiring-video-advertisements">Acquiring video advertisements</h3>
-
-<p><code>instreamAdLoader.getVideoControl(withFrame:infoModel:)</code> Can use to acquire <code>RFPPlayerControl</code>.</p>
-
-<h4 id="specifying-viewcontrollerforpresentingmodalview">Specifying viewControllerForPresentingModalView</h4>
-
-<p>In the case of Video playback, be sure to specify <code>RFPInstreamAdLoaderDelegate.viewControllerForPresentingModalView</code>.</p>
-
-<p>This is necessary when switching the video to Fullscreen.</p>
-
-<p>For the return value, specify the calling source UIViewController.</p>
-
-<pre><code class="language-:swift">func rfpInstreamAdLoaderDidFinishLoadingAd(withReturn instreamAdLoader: RFPInstreamAdLoader!, instreamInfoModels: [Any]!) {
-
-    // Acquiring In-Feed advertisement information
-    for model: RFPInstreamInfoModel in instreamInfoModels as! [RFPInstreamInfoModel] {
-        if (model.isVideo()) {
-            // Acquiring RFPPlayerControl
-            let playerControl = instreamAdLoader.getVideoControl(withFrame: containerView.bounds, infoModel: model)!
-            // Do not set other than playerUiView
-            containerView.subviews.forEach { subview in
-                subview.removeFromSuperview()
-            }
-            containerView.addSubview(playerControl)
-        }
-    }
-}
-
-// ※ Mandatory in case of video advertisement playback
-func viewControllerForPresentingModalView() -&gt; UIViewController! {
-    return self
-}
-</code></pre>
-
-<p><a name="infeed/video/readytoplay"></a></p>
-
-<h3 id="playback-preparation-complete">Playback preparation complete</h3>
-
-<p>When playback preparation is complete, <code>RFPInstreamAdLoaderDelegate.readyToPlay(with:)</code> is called.</p>
-
-<p>The initial state of the player is a paused state.</p>
-
-<pre><code class="language-:swift">func readyToPlay(with playerControl: RFPPlayerControl!) {
-    // Playback
-    playerControl.play()
-    // Pause
-    playerControl.pause()
-}
-</code></pre>
-
-<p><a name="infeed/video/play"></a></p>
-
-<h3 id="playing-the-video">Playing the video</h3>
-
-<p>Start playback using <code>RFPPlayerControl.play()</code>.</p>
-
-<p>It is possible to pause using <code>RFPPlayerControl.pause()</code>.</p>
-
-<pre><code class="language-:swift">    // Playback
-    playerControl.play()
-    // Pause
-    playerControl.pause()
-</code></pre>
-
-<p><a name="infeed/video/didplaytoend"></a></p>
-
-<h3 id="end-playback">End playback</h3>
-
-<p>(<strong>Can be used on v2.7.0 or later</strong>)</p>
-
-<p>When playback is ended,<code>RFPInstreamAdLoaderDelegate.didPlayToEndTime(with:)</code> is called.</p>
-
-<pre><code class="language-:swift">func didPlayToEndTime(with playerControl: RFPPlayerControl!) {
-    // for playback ended
-}
-</code></pre>
-
-<p><a name="infeed/video/cache"></a></p>
-
-<h3 id="cache-settings">Cache settings</h3>
-
-<p>(<strong>Can be used on v2.5.0 or later, iOS10 or later</strong>)</p>
-
-<p>In the RFP, video advertisements are cached to a certain extent in the internal storage of the terminal (HLS download storage), and this reduces communication volume and improves the video advertisement playback response.</p>
-
-<p>The setting values recommended by the RFP are used for the cache capacity. This value can be changed from the app side.</p>
-
-<p>When changing the cache capacity, use the <code>RFP.rfpSetVideoCacheSize(_:)</code> to set the cache capacity.</p>
+<p>Your app can use the <code>RFP.rfpSetHttpRequestTimeoutInterval(_:)</code> to set HTTP request&rsquo;s timeout interval in RFP.</p>
 
 <pre><code class="language-:swift">func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
 
-    // Acquire current setting value
-    let size = RFP.rfpGetVideoCacheSize()
+    // Set HTTP request interval to 15s
+    RFP.rfpSetHttpRequestTimeoutInterval(15)
 
-    //Set the video cache to 100 MB.
-    RFP.rfpSetVideoCacheSize(100);
-
-    // Disable the video cache
-    RFP.rfpSetVideoCacheSize(0);
-
-    // ※ Be sure to set the rfpSetVideoCacheSize before rfpInitMedia
+    // ※ Be sure to set the rfpSetHttpRequestTimeoutInterval before rfpInitMedia
     RFP.rfpInitMedia(&quot;your_media_id&quot;)
+
+    // Acquire current setting value
+    let timeoutInterval = RFP.rfpGetHttpRequestTimeoutInterval()
+    // ...
 }
 </code></pre>
 
-<h4 id="points-to-note-when-setting-the-cache">Points to note when setting the cache</h4>
-
-<p>*In iOS11 or later, the cached video advertisements are displayed with the name”<code>video_ad_cache_rfp</code>” under ‘[Settings]’&gt;’[General]’&gt;<code>[iPhone storage]</code>&gt;<code>{each app name}</code>. This cached file can be deleted at any time by the user.
-* The cache is cleared at the time <code>rfpInitMedia</code> is called. For this reason, the cache capacity temporarily set in <code>rfpSetVideoCacheSize</code> may be exceeded.</p>
-
-<p><a name="infeed/video/tapped"></a></p>
-
-<h3 id="setting-the-tap-action">Setting the tap action</h3>
-
-<p>(<strong>Can be used on v2.7.0 or later</strong>)</p>
-
-<p>Set action when player is tapped.The default is Fullscreen.</p>
+<h4 id="points-to-note-when-setting-the-timeout-interval">Points to note when setting the timeout interval</h4>
 
 <ul>
-<li><code>RFPPlayerControl.setTapActionFullscreen</code>
+<li><p>A very short interval could lead to failed to get ads. Please set the value according to the situation.</p></li>
 
-<ul>
-<li>Start Fullscreen. This is the default behavior.</li>
-</ul></li>
-<li><code>RFPPlayerControl.setTapActionAdClick</code>
-
-<ul>
-<li>It becomes the operation of ad click. Playback will be stopped.</li>
-</ul></li>
-<li><code>RFPPlayerControl.replaceTapAction:</code>
-
-<ul>
-<li>You can set arbitrary processing.</li>
-</ul></li>
+<li><p>If you set an interval longer than the timeout interval of the server, it follows the timeout of the server.</p></li>
 </ul>
-
-<pre><code class="language-:swift">// for Fullscreen
-playerControl.setTapActionFullscreen()
-
-// for Ad click
-playerControl.setTapActionAdClick()
-
-// for arbitrary processing
-playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
-    if let weakPlayer = playerControl {
-        // ex) pause
-        weakPlayer.pause()
-    }
-})
-</code></pre>
 
 
 <footer class=" footline" >
@@ -836,26 +654,6 @@ playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
                 
                 
 
@@ -888,6 +686,26 @@ playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -941,10 +759,10 @@ playerControl.replaceTapAction({ [weak playerControl] () -&gt; Void in
 
 
         
-            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/programming-guide/2_4/" title="Customized In-Feed advertising"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/RFP-iOS-SDK/en/programming-guide/2_8/" title="Error code description"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/RFP-iOS-SDK/en/programming-guide/2_8/" title="Error code description" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/RFP-iOS-SDK/en/programming-guide/2_6/" title="Support for GIF advertising" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 

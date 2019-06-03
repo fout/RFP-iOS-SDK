@@ -101,6 +101,34 @@
   </url>
   
   <url>
+    <loc>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_8/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://fout.github.io/RFP-iOS-SDK/programming-guide/2_8/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_8/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_7/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://fout.github.io/RFP-iOS-SDK/programming-guide/2_7/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_7/"
+                />
+  </url>
+  
+  <url>
     <loc>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</loc>
     <xhtml:link
                 rel="alternate"

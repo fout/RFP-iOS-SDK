@@ -57,15 +57,37 @@ Components provided with the video advertisement SDK  RFPPlayerControl  This is 
     </item>
     
     <item>
-      <title>Set HTTP request timeout interval</title>
-      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</link>
+      <title>Error code description</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_8/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</guid>
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_8/</guid>
+      <description>Description of error codes that acquired from Loading customized In-Feed advertisements and acquiring events at the time of each notification.
+   error code description     1000 Couldn&amp;rsquo;t load any ad information for Ad spot.   1001 Media ID has not been set yet, please refer to Initializing the SDK.   1002 Internal error in SDK. Please contact our representative.   1003 Media ID is invalid.</description>
+    </item>
+    
+    <item>
+      <title>Set HTTP request timeout interval</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_7/</guid>
       <description>Set HTTP request timeout interval  
 Set HTTP request timeout interval (Can be used on v2.6.0 or later)
 Your app can use the RFP.rfpSetHttpRequestTimeoutInterval(_:) to set HTTP request&amp;rsquo;s timeout interval in RFP.
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&amp;gt; Bool { // Set HTTP request interval to 15s RFP.rfpSetHttpRequestTimeoutInterval(15) // ※ Be sure to set the rfpSetHttpRequestTimeoutInterval before rfpInitMedia RFP.rfpInitMedia(&amp;quot;your_media_id&amp;quot;) // Acquire current setting value let timeoutInterval = RFP.</description>
+    </item>
+    
+    <item>
+      <title>Support for GIF advertising</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_6/</guid>
+      <description>Identifying GIF advertisement Displaying GIF advertisement  The following guide shows an example about how to load animated GIF by UIImageView for users who want to display GIF ads.
+ Also some libraries like SwiftGif can display animated GIF ads.  
+Identifying GIF advertisement Loading data from Customized In-Feed advertisement parameters&amp;rsquo;s property&amp;rsquo;,can identify data is GIF if mimeType from response data is image/gif.
+URLSession.shared.dataTask(with: URLRequest(url: instreamInfoModel.imageURL!)) { (data, response, error) in guard let data = data, let response = response as?</description>
     </item>
     
   </channel>
