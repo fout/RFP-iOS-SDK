@@ -33,40 +33,4 @@ class RFPImageAdCell: RFPTableViewAdCell {
         self.actionButton.removeTarget(nil, action: nil, for: .allEvents)
         super.initProperties()
     }
-
-    override func tick() {
-        if let tableView = self.getTableView() {
-
-            if self.indexPath != nil && tableView.superview != nil {
-
-                // current cell rect
-                let cellRect = tableView.convert(
-                    tableView.rectForRow(at: self.indexPath!),
-                    to: tableView.superview!
-                )
-
-                // check viewability
-                if self.viewableRect.intersects(cellRect) {
-                    // viewable
-                    if self.startTime == 0 {
-                        // start timer
-                        self.startTime = Date().timeIntervalSince1970
-                    } else {
-                        if self.elapsed <= (Date().timeIntervalSince1970 - self.startTime) {
-                            // time has come
-                            if self.completion != nil {
-                                self.completion!(self.indexPath!)
-                                self.startTime = Double.infinity
-                            }
-                        }
-                    }
-                } else {
-                    // unviewable
-                    if self.startTime != Double.infinity {
-                        self.startTime = 0
-                    }
-                }
-            }
-        }
-    }
 }

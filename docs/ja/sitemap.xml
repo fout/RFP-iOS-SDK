@@ -143,6 +143,20 @@
   </url>
   
   <url>
+    <loc>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_9/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://fout.github.io/RFP-iOS-SDK/programming-guide/2_9/"
+                />
+  </url>
+  
+  <url>
     <loc>https://fout.github.io/RFP-iOS-SDK/programming-guide/</loc>
     <xhtml:link
                 rel="alternate"

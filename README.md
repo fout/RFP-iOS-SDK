@@ -8,7 +8,7 @@ Install with CocoaPods by adding the following to your Podfile:
 
 
 ```
-pod 'RFP-iOS-SDK', '~> 2.8.1'
+pod 'RFP-iOS-SDK'
 ```
 
 ### Carthage

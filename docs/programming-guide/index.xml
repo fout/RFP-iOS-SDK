@@ -73,5 +73,14 @@
       <description>カスタムインフィード広告のロードと各種通知時のイベント取得を利用してイベントを受け取る際のエラー詳細についての説明です。 エラーコード 説明 1000 対</description>
     </item>
     
+    <item>
+      <title>Viewable Impressionライブラリーの提供</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_9/</guid>
+      <description>(v2.9.1以上で利用可能) RFP iOS SDK ではViewable ImpressionをサポートするAPI RFPVisibilityTracker を提供しています。 この機能をご利用になるに</description>
+    </item>
+    
   </channel>
 </rss>

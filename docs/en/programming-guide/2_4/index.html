@@ -13,19 +13,19 @@
     <title>Customized In-Feed advertising :: RFP-iOS-SDK Docs</title>
     
     
-    <link href="/RFP-iOS-SDK/css/nucleus.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hybrid.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/auto-complete.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/theme.css?1559546010" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1559546010" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1573540267" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1573540267" rel="stylesheet">
     
-      <link href="/RFP-iOS-SDK/css/theme-blue.css?1559546010" rel="stylesheet">
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1573540267" rel="stylesheet">
     
 
-    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1573540267"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1559546010"></script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1559546010"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1573540267"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1573540267"></script>
 <script type="text/javascript">
     
         var baseurl = "\/RFP-iOS-SDK\/en";
     
 </script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1559546010"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1573540267"></script>
 
     
   </div>
@@ -272,6 +272,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/RFP-iOS-SDK/en/programming-guide/2_9/" title="Library Support for Viewable Impression" class="dd-item ">
+        <a href="/RFP-iOS-SDK/en/programming-guide/2_9/">
+        Library Support for Viewable Impression
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -465,6 +484,7 @@
 <li><a href="#customized-in-feed-advertisement-parameters">Customized In-Feed advertisement parameters</a></li>
 <li><a href="#arbitrary-use-of-the-advertisement-format-provided-as-default-by-sdk">Arbitrary use of the advertisement format provided as default by SDK</a></li>
 <li><a href="#acquire-exceptions-occurring-within-sdk">Acquire exceptions occurring within SDK</a></li>
+<li><a href="#about-dark-mode">About Dark Mode</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -498,6 +518,7 @@
 <li><a href="#infeed/custom/param">Customized In-Feed advertisement parameters</a></li>
 <li><a href="#infeed/custom/format">Arbitrary use of advertisement formats provided as default by SDK</a></li>
 <li><a href="#infeed/custom/exception">Acquiring exceptions occurring within SDK</a></li>
+<li><a href="#infeed/custom/darkmode">About Dark Mode</a></li>
 </ul>
 
 <p>When you want to display with more flexibility than with simple In-Feed advertisements, you can use customized In-Feed advertisement functions.</p>
@@ -628,6 +649,8 @@ RFPInstreamAdLoader.rfpSendClickEvent(model)
 <p>There are times when you will wish to receive this event, when loading In-Feed advertisements or giving each notification.</p>
 
 <p>In this case, the delegate property in  <code>RFPInstreamAdLoader</code> conforms to <code>RFPInstreamAdLoaderDelegate</code>, and can be received.</p>
+
+<p>If using <a href="../2_9">Library Support for Viewable Impression</a> to track  <strong>viewable impression</strong>, impression&rsquo;s results would be sent from the library.</p>
 
 <pre><code class="language-:swift">override func viewDidLoad() {
     super.viewDidLoad()
@@ -820,6 +843,15 @@ Please refer to <a href="../2_8/#errorcode">Error code description</a> for detai
     }
 }
 </code></pre>
+
+<p><a name="infeed/custom/darkmode"></a></p>
+
+<h3 id="about-dark-mode">About Dark Mode</h3>
+
+<p>In iOS 13.0 and later, users can choose to adopt a dark system-wide appearance called Dark Mode.
+Please ensure that advertisements can be recognized in both modes.</p>
+
+<p>Please see <a href="https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/dark-mode/">Human Interface Guidelines/Dark Mode</a> for the details about Dark Mode.</p>
 
 
 <footer class=" footline" >
@@ -1021,6 +1053,22 @@ Please refer to <a href="../2_8/#errorcode">Error code description</a> for detai
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1075,20 +1123,20 @@ Please refer to <a href="../2_8/#errorcode">Error code description</a> for detai
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1573540267"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/learn.js?1559546010"></script>
-    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1559546010"></script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1573540267"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1573540267"></script>
 
-    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1559546010" type="text/css" rel="stylesheet" />
-    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1559546010"></script>
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1573540267" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1573540267"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

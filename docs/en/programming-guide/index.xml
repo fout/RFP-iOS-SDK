@@ -42,7 +42,7 @@ For other uses, use Customized In-Feed advertisements.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_4/</guid>
-      <description>Loading customized In-Feed advertisements Displaying customized In-Feed advertisements Notifying impressions of customized In-Feed advertisements Transition processing when clicking customized In-Feed advertisements Acquiring display characters for customized In-Feed advertisement button Loading customized In-Feed advertisements and acquiring events at the time of each notification Customized In-Feed advertisement parameters Arbitrary use of advertisement formats provided as default by SDK Acquiring exceptions occurring within SDK  When you want to display with more flexibility than with simple In-Feed advertisements, you can use customized In-Feed advertisement functions.</description>
+      <description>Loading customized In-Feed advertisements Displaying customized In-Feed advertisements Notifying impressions of customized In-Feed advertisements Transition processing when clicking customized In-Feed advertisements Acquiring display characters for customized In-Feed advertisement button Loading customized In-Feed advertisements and acquiring events at the time of each notification Customized In-Feed advertisement parameters Arbitrary use of advertisement formats provided as default by SDK Acquiring exceptions occurring within SDK About Dark Mode  When you want to display with more flexibility than with simple In-Feed advertisements, you can use customized In-Feed advertisement functions.</description>
     </item>
     
     <item>
@@ -88,6 +88,18 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
  Also some libraries like SwiftGif can display animated GIF ads.  
 Identifying GIF advertisement Loading data from Customized In-Feed advertisement parameters&amp;rsquo;s property&amp;rsquo;,can identify data is GIF if mimeType from response data is image/gif.
 URLSession.shared.dataTask(with: URLRequest(url: instreamInfoModel.imageURL!)) { (data, response, error) in guard let data = data, let response = response as?</description>
+    </item>
+    
+    <item>
+      <title>Library Support for Viewable Impression</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_9/</guid>
+      <description>(Can be used on v2.9.1 or later)
+RFP iOS SDK provides API RFPVisibilityTracker to support viewable impression for advertisements.
+Please call RFPVisibilityTracker.init(startTrackingAdView: UIView, infoModel: RFPInstreamInfoModel) and pass in the advertisement&amp;rsquo;s UIView instance and RFPInstreamInfoModel&amp;rsquo;s instance which keeps your advertisement&amp;rsquo;s data to init the tracker for tracking the advertisement&amp;rsquo;s viewable impression. The tracker will send impression event from the SDK when the advertisement satisfy the viewable impression conditions.
+We use NSTimer in RFPVisibilityTracker.</description>
     </item>
     
   </channel>

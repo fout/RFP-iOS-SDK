@@ -14,10 +14,6 @@ class FeedTableViewController: UITableViewController
     , RFPExceptionDelegate
     , RFPTableViewAdCellDelegate {
 
-    // elapsed time to track viewable imp
-    let videoElapsed: Double = 2.0
-    let imageElapsed: Double = 1.0
-
     // App contents
     var contents: [AnyObject] = [
         "sunday" as AnyObject, "monday" as AnyObject, "tuesday" as AnyObject, "wednesday" as AnyObject,
@@ -160,14 +156,8 @@ class FeedTableViewController: UITableViewController
         }
 
         if let rfpCell = cell as? RFPTableViewAdCell {
-            // viewable impression
-            rfpCell.setTimerCompletion({ [weak self] indexPath in
-                guard let `self` = self else {
-                    return
-                }
-                self.adLoader.rfpMeasureImp(self.infoModels[indexPath.row])
-                print("[viewable imp]", indexPath)
-            })
+            rfpCell.visibilityTracker = RFPVisibilityTracker.init(startTrackingAdView: rfpCell, infoModel: item)
+            rfpCell.visibilityTracker?.delegate = rfpCell
         }
         return cell
     }
@@ -254,7 +244,6 @@ class FeedTableViewController: UITableViewController
         cell.delegate = self
         cell.indexPath = indexPath
         cell.model = instreamInfoModel
-        cell.elapsed = self.videoElapsed
 
         // text
         cell.advertiser.text = instreamInfoModel.displayedAdvertiser
@@ -297,7 +286,6 @@ class FeedTableViewController: UITableViewController
         // settings
         cell.indexPath = indexPath
         cell.model = instreamInfoModel
-        cell.elapsed = self.imageElapsed
         cell.delegate = self
 
         // text

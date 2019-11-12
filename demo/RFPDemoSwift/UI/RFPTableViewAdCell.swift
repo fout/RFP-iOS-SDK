@@ -12,8 +12,6 @@ protocol RFPTableViewAdCellProtocol {
 
     func startTimer(interval: TimeInterval)
 
-    func setTimerCompletion(_ completion: @escaping ((_ indexPath: IndexPath) -> Void))
-
     func tick()
 
     func getTableView() -> UITableView?
@@ -26,8 +24,6 @@ protocol RFPTableViewAdCellDelegate {
 
 class RFPTableViewAdCell: UITableViewCell, RFPTableViewAdCellProtocol {
 
-    var elapsed: Double = 2
-    var completion: ((IndexPath) -> Void)?
     var delegate: RFPTableViewAdCellDelegate?
 
     weak var model: RFPInstreamInfoModel?
@@ -43,21 +39,20 @@ class RFPTableViewAdCell: UITableViewCell, RFPTableViewAdCellProtocol {
     var viewableRect: CGRect = CGRect.init()
     var viewableRate: CGFloat = 0.5
 
+    var visibilityTracker: RFPVisibilityTracker?
+
     override func prepareForReuse() {
         super.prepareForReuse()
 
         self.startTime = 0
         self.model = nil
         self.indexPath = nil
-        self.completion = nil
     }
 
     func initProperties() {
         self.stopTimer()
 
-        self.completion = nil
         self.delegate = nil
-        self.completion = nil
         self.model = nil
         self.indexPath = nil
         self.startTime = 0
@@ -92,10 +87,6 @@ class RFPTableViewAdCell: UITableViewCell, RFPTableViewAdCellProtocol {
             self.timer?.invalidate()
             self.timer = nil
         }
-    }
-
-    func setTimerCompletion(_ completion: @escaping ((IndexPath) -> Void)) {
-        self.completion = completion
     }
 
     func prepare() {
@@ -145,5 +136,17 @@ class RFPTableViewAdCell: UITableViewCell, RFPTableViewAdCellProtocol {
 
     deinit {
         print("[deinit]", self)
+        self.visibilityTracker = nil
+    }
+}
+
+// MARK: RFPInstreamAdLoaderDelegate
+extension RFPTableViewAdCell: RFPVisibilityTrackerDelegate {
+    public func rfpVisibilityTrackerDidSentImp() {
+        print("rfpVisibilityTrackerDidSentImp", self.indexPath ?? "no ad info")
+    }
+
+    public func rfpVisibilityTrackerFailedToSendImpWithError(_ error: Error!) {
+        print("rfpVisibilityTrackerDidFailToSendImpWithError", error ?? "error is null")
     }
 }
