@@ -156,7 +156,7 @@ class FeedTableViewController: UITableViewController
         }
 
         if let rfpCell = cell as? RFPTableViewAdCell {
-            rfpCell.visibilityTracker = RFPVisibilityTracker.init(startTrackingAdView: rfpCell, infoModel: item)
+            rfpCell.visibilityTracker = RFPVisibilityTracker.init(startTrackingAdView: rfpCell.contentView, infoModel: item)
             rfpCell.visibilityTracker?.delegate = rfpCell
         }
         return cell
