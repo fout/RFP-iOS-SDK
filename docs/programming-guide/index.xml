@@ -82,5 +82,14 @@
       <description>(v2.9.1以上で利用可能) RFP iOS SDK ではViewable ImpressionをサポートするAPI RFPVisibilityTracker を提供しています。 この機能をご利用になるに</description>
     </item>
     
+    <item>
+      <title>アウトストリーム動画広告</title>
+      <link>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://fout.github.io/RFP-iOS-SDK/programming-guide/2_10/</guid>
+      <description>この機能を使用するにはv2.10.0以降のSDKが必要です アウトストリーム動画広告の配信 実装 初期化処理 Delegateの準備 動画広告の取得 動</description>
+    </item>
+    
   </channel>
 </rss>

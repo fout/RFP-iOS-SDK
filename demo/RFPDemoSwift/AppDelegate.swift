@@ -25,9 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set http timeout(default: 15sec)
         //RFP.rfpSetHttpRequestTimeoutInterval(10.0);
 
-        // Init media
-        RFP.rfpInitMedia("3")
-
         return true
     }
 

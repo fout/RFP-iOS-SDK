@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jdq-0K-Bic">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jdq-0K-Bic">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +14,7 @@
             <objects>
                 <navigationController id="Jdq-0K-Bic" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F7T-RN-4lE">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiu-pr-ipr" customClass="RFPCustomButton" customModule="RFPDemoSwift" customModuleProvider="target">
-                                <rect key="frame" x="87" y="352" width="200" height="32"/>
+                                <rect key="frame" x="87.5" y="332" width="200" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="qQF-yy-i8I"/>
                                 </constraints>
@@ -48,7 +47,7 @@
                                         <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -59,27 +58,53 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="native_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Khx-sN-2RN">
-                                <rect key="frame" x="0.0" y="180" width="375" height="50"/>
+                                <rect key="frame" x="0.0" y="160" width="375" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="sLb-g6-K8e"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poets_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-k3-oKG">
-                                <rect key="frame" x="0.0" y="240" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="az0-jk-qnx"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rfp_logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aCw-BE-iDI">
-                                <rect key="frame" x="0.0" y="114" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="171-fr-cH6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cs2-DQ-Twp" customClass="RFPCustomButton" customModule="RFPDemoSwift" customModuleProvider="target">
+                                <rect key="frame" x="87.5" y="436" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="1jv-il-inK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Outstream Video">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="DNc-l1-dhf" kind="show" id="GdU-Sx-oWd"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Do-mA-cNH"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aCw-BE-iDI" secondAttribute="trailing" id="45S-2B-RUh"/>
+                            <constraint firstItem="Cs2-DQ-Twp" firstAttribute="top" secondItem="aiu-pr-ipr" secondAttribute="bottom" constant="72" id="7mp-rP-9Of"/>
                             <constraint firstItem="Khx-sN-2RN" firstAttribute="leading" secondItem="6Do-mA-cNH" secondAttribute="leading" id="8Iu-Kr-ai3"/>
                             <constraint firstItem="aCw-BE-iDI" firstAttribute="top" secondItem="6Do-mA-cNH" secondAttribute="top" constant="50" id="C0M-YB-NNe"/>
                             <constraint firstItem="vQK-k3-oKG" firstAttribute="top" secondItem="Khx-sN-2RN" secondAttribute="bottom" constant="10" id="QlX-lY-Faa"/>
@@ -89,10 +114,10 @@
                             <constraint firstItem="Khx-sN-2RN" firstAttribute="top" secondItem="aCw-BE-iDI" secondAttribute="bottom" constant="10" id="gb1-0L-B9G"/>
                             <constraint firstItem="vQK-k3-oKG" firstAttribute="leading" secondItem="6Do-mA-cNH" secondAttribute="leading" id="hhh-mS-KVO"/>
                             <constraint firstItem="aiu-pr-ipr" firstAttribute="centerX" secondItem="aEn-19-YaB" secondAttribute="centerX" id="pc5-i1-RLm"/>
+                            <constraint firstItem="Cs2-DQ-Twp" firstAttribute="centerX" secondItem="aEn-19-YaB" secondAttribute="centerX" id="sg7-ka-0uo"/>
                             <constraint firstItem="vQK-k3-oKG" firstAttribute="trailing" secondItem="6Do-mA-cNH" secondAttribute="trailing" id="uaw-1Y-xCJ"/>
                             <constraint firstItem="aiu-pr-ipr" firstAttribute="top" secondItem="vQK-k3-oKG" secondAttribute="bottom" constant="72" id="uiu-YV-kt6"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Do-mA-cNH"/>
                     </view>
                     <navigationItem key="navigationItem" title="Menu" id="XJH-pH-Owg"/>
                 </viewController>
@@ -118,10 +143,49 @@
             </objects>
             <point key="canvasLocation" x="1033" y="-329"/>
         </scene>
+        <!--OutstreamVideo-->
+        <scene sceneID="mFK-GL-MtN">
+            <objects>
+                <viewController title="OutstreamVideo" id="DNc-l1-dhf" customClass="OutstreamVideoViewController" customModule="RFPDemoSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwX-Bg-dty">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldq-80-lCq">
+                                <rect key="frame" x="27.5" y="144" width="320" height="180"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="5In-4U-8YK"/>
+                                    <constraint firstAttribute="width" secondItem="Ldq-80-lCq" secondAttribute="height" multiplier="16:9" id="5o0-hV-E50"/>
+                                    <constraint firstAttribute="height" constant="180" id="qsh-7d-S2z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tVO-sl-gUL"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="Ldq-80-lCq" firstAttribute="centerX" secondItem="iwX-Bg-dty" secondAttribute="centerX" id="Hzl-6R-7Bi"/>
+                            <constraint firstItem="Ldq-80-lCq" firstAttribute="top" secondItem="tVO-sl-gUL" secondAttribute="top" constant="100" id="yN5-CK-uhq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hut-LX-cg9"/>
+                    <connections>
+                        <outlet property="videoView" destination="Ldq-80-lCq" id="CO8-cc-9hn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZl-nx-fAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="440.32983508245883"/>
+        </scene>
     </scenes>
     <resources>
         <image name="native_logo" width="1139" height="342"/>
         <image name="poets_logo" width="1263" height="297"/>
         <image name="rfp_logo" width="1040" height="468"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

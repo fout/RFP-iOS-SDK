@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B432A8045854C482BB03FEC4 /* Pods_RFPDemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1240C8E5B6B416308E3DF1A7 /* Pods_RFPDemoSwift.framework */; };
+		F90AF27C254BC5680066A067 /* OutstreamVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AF27B254BC5680066A067 /* OutstreamVideoViewController.swift */; };
 		F94AFB192109A56B00530198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AFB182109A56B00530198 /* AppDelegate.swift */; };
 		F94AFB1B2109A56B00530198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AFB1A2109A56B00530198 /* ViewController.swift */; };
 		F94AFB1E2109A56B00530198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F94AFB1C2109A56B00530198 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		1240C8E5B6B416308E3DF1A7 /* Pods_RFPDemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RFPDemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		268F73ACCEF2D5CD6692000D /* Pods-RFPDemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFPDemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RFPDemoSwift/Pods-RFPDemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		D8A835E656A003A7993FD649 /* Pods-RFPDemoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFPDemoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-RFPDemoSwift/Pods-RFPDemoSwift.release.xcconfig"; sourceTree = "<group>"; };
+		F90AF27B254BC5680066A067 /* OutstreamVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutstreamVideoViewController.swift; sourceTree = "<group>"; };
 		F94AFB152109A56B00530198 /* RFPDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFPDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94AFB182109A56B00530198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F94AFB1A2109A56B00530198 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F90AF279254BC5330066A067 /* OutstreamVideo */ = {
+			isa = PBXGroup;
+			children = (
+				F90AF27B254BC5680066A067 /* OutstreamVideoViewController.swift */,
+			);
+			path = OutstreamVideo;
+			sourceTree = "<group>";
+		};
 		F94AFB0C2109A56B00530198 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +107,7 @@
 		F94AFB172109A56B00530198 /* RFPDemoSwift */ = {
 			isa = PBXGroup;
 			children = (
+				F90AF279254BC5330066A067 /* OutstreamVideo */,
 				F9589164210AC8C400937488 /* UI */,
 				F9589163210AC8B500937488 /* Feed */,
 				F94AFB182109A56B00530198 /* AppDelegate.swift */,
@@ -236,6 +247,7 @@
 				F9589166210AC90700937488 /* RFPCustomButton.swift in Sources */,
 				F9589172210AE1D400937488 /* RFPVideoAdCell.swift in Sources */,
 				F958916E210AE1BA00937488 /* RFPImageAdCell.swift in Sources */,
+				F90AF27C254BC5680066A067 /* OutstreamVideoViewController.swift in Sources */,
 				F94AFB192109A56B00530198 /* AppDelegate.swift in Sources */,
 				F9589168210AD1F500937488 /* FeedTableViewController.swift in Sources */,
 			);
@@ -390,6 +402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.fout.rfp.sample.RFPDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
@@ -411,6 +424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.fout.rfp.sample.RFPDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";

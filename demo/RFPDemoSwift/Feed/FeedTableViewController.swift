@@ -41,6 +41,9 @@ class FeedTableViewController: UITableViewController
 
         print("FeedTableViewController viewDidLoad")
 
+        // Init media
+        RFP.rfpInitMedia("3")
+
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -106,7 +109,7 @@ class FeedTableViewController: UITableViewController
     }
 
     func viewControllerForPresentingModalView() -> UIViewController! {
-        return self
+        self
     }
 
     func readyToPlay(with playerControl: RFPPlayerControl!) {
@@ -126,7 +129,7 @@ class FeedTableViewController: UITableViewController
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contents.count
+        contents.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -311,7 +314,9 @@ class FeedTableViewController: UITableViewController
                 }
                 //check if image is gif
                 if (response.mimeType == "image/gif") {
-                    guard let imageView = self.createGifImageFromData(data: data as NSData, bounds: cell.containerView.bounds) else {return}
+                    guard let imageView = self.createGifImageFromData(data: data as NSData, bounds: cell.containerView.bounds) else {
+                        return
+                    }
                     cell.indexPath = indexPath
                     cell.containerView.addSubview(imageView)
                     imageView.startAnimating()
@@ -325,20 +330,24 @@ class FeedTableViewController: UITableViewController
                     cell.startTimer()
                 }
             })
-            }.resume()
+        }.resume()
         return cell;
     }
 
-    func createGifImageFromData (data : NSData, bounds : CGRect) -> UIImageView?  {
-        guard let gifImagesSource = CGImageSourceCreateWithData(data as CFData, nil) else {return nil}
+    func createGifImageFromData(data: NSData, bounds: CGRect) -> UIImageView? {
+        guard let gifImagesSource = CGImageSourceCreateWithData(data as CFData, nil) else {
+            return nil
+        }
         //gif image's count
         let gifImagesCount = CGImageSourceGetCount(gifImagesSource)
         var gifImagesArray = [UIImage]()
-        var totalDuration : Float = 0
+        var totalDuration: Float = 0
         let imageView = UIImageView(frame: bounds)
 
-        for i in 0 ..< gifImagesCount {
-            guard let cgImage = CGImageSourceCreateImageAtIndex(gifImagesSource, i, nil) else { continue }
+        for i in 0..<gifImagesCount {
+            guard let cgImage = CGImageSourceCreateImageAtIndex(gifImagesSource, i, nil) else {
+                continue
+            }
             let image = UIImage(cgImage: cgImage)
             if i == 0 {
                 imageView.image = image
@@ -346,13 +355,15 @@ class FeedTableViewController: UITableViewController
             gifImagesArray.append(image)
 
             // Frame default duration
-            var frameDuration : Float = 0.1;
+            var frameDuration: Float = 0.1;
             guard let properties = CGImageSourceCopyPropertiesAtIndex(gifImagesSource, i, nil) else {
                 totalDuration += frameDuration
-                continue }
+                continue
+            }
             guard let gifDict = (properties as NSDictionary)[kCGImagePropertyGIFDictionary] as? NSDictionary else {
                 totalDuration += frameDuration
-                continue }
+                continue
+            }
 
             if let delayTimeUnclampedProp = gifDict[kCGImagePropertyGIFUnclampedDelayTime as String] as? NSNumber {
                 frameDuration = delayTimeUnclampedProp.floatValue
