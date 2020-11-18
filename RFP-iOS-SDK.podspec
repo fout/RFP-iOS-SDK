@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RFP-iOS-SDK"
-  s.version      = "2.10.0"
+  s.version      = "2.10.1"
   s.summary      = "RFP SDK for iOS"
   s.homepage     = "https://github.com/fout/RFP-iOS-SDK"
   s.license      = {
@@ -21,4 +21,10 @@ Pod::Spec.new do |s|
   s.frameworks = 'AdSupport'
   s.compiler_flags = '-ObjC'
   s.requires_arc = true
+
+  s.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+
 end

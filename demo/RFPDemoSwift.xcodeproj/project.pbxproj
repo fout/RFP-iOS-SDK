@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B432A8045854C482BB03FEC4 /* Pods_RFPDemoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1240C8E5B6B416308E3DF1A7 /* Pods_RFPDemoSwift.framework */; };
 		F90AF27C254BC5680066A067 /* OutstreamVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90AF27B254BC5680066A067 /* OutstreamVideoViewController.swift */; };
 		F94AFB192109A56B00530198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AFB182109A56B00530198 /* AppDelegate.swift */; };
 		F94AFB1B2109A56B00530198 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94AFB1A2109A56B00530198 /* ViewController.swift */; };
@@ -27,8 +26,6 @@
 
 /* Begin PBXFileReference section */
 		1240C8E5B6B416308E3DF1A7 /* Pods_RFPDemoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RFPDemoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		268F73ACCEF2D5CD6692000D /* Pods-RFPDemoSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFPDemoSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RFPDemoSwift/Pods-RFPDemoSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		D8A835E656A003A7993FD649 /* Pods-RFPDemoSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RFPDemoSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-RFPDemoSwift/Pods-RFPDemoSwift.release.xcconfig"; sourceTree = "<group>"; };
 		F90AF27B254BC5680066A067 /* OutstreamVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutstreamVideoViewController.swift; sourceTree = "<group>"; };
 		F94AFB152109A56B00530198 /* RFPDemoSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RFPDemoSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F94AFB182109A56B00530198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B432A8045854C482BB03FEC4 /* Pods_RFPDemoSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,15 +63,6 @@
 				1240C8E5B6B416308E3DF1A7 /* Pods_RFPDemoSwift.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DB279D5E8C2402134C95A226 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				268F73ACCEF2D5CD6692000D /* Pods-RFPDemoSwift.debug.xcconfig */,
-				D8A835E656A003A7993FD649 /* Pods-RFPDemoSwift.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		F90AF279254BC5330066A067 /* OutstreamVideo */ = {
@@ -91,7 +78,6 @@
 			children = (
 				F94AFB172109A56B00530198 /* RFPDemoSwift */,
 				F94AFB162109A56B00530198 /* Products */,
-				DB279D5E8C2402134C95A226 /* Pods */,
 				6B749B85632A3E2252F88083 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -151,7 +137,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F94AFB272109A56E00530198 /* Build configuration list for PBXNativeTarget "RFPDemoSwift" */;
 			buildPhases = (
-				A46953896CAC8B5197A14C2D /* [CP] Check Pods Manifest.lock */,
 				F94AFB112109A56B00530198 /* Sources */,
 				F94AFB122109A56B00530198 /* Frameworks */,
 				F94AFB132109A56B00530198 /* Resources */,
@@ -172,7 +157,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1220;
 				ORGANIZATIONNAME = "FreakOut inc.,";
 				TargetAttributes = {
 					F94AFB142109A56B00530198 = {
@@ -214,27 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A46953896CAC8B5197A14C2D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RFPDemoSwift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F94AFB112109A56B00530198 /* Sources */ = {
@@ -301,6 +265,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -326,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -361,6 +326,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -380,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -391,18 +357,16 @@
 		};
 		F94AFB282109A56E00530198 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 268F73ACCEF2D5CD6692000D /* Pods-RFPDemoSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RFPDemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.fout.rfp.sample.RFPDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
@@ -413,18 +377,16 @@
 		};
 		F94AFB292109A56E00530198 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A835E656A003A7993FD649 /* Pods-RFPDemoSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RFPDemoSwift/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.fout.rfp.sample.RFPDemoSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
