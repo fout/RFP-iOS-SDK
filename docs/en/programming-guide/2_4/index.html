@@ -13,19 +13,19 @@
     <title>Customized In-Feed advertising :: RFP-iOS-SDK Docs</title>
     
     
-    <link href="/RFP-iOS-SDK/css/nucleus.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hybrid.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/auto-complete.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/theme.css?1613534711" rel="stylesheet">
-    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1613534711" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/nucleus.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/font-awesome.min.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hybrid.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/featherlight.min.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/perfect-scrollbar.min.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/auto-complete.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/theme.css?1628045915" rel="stylesheet">
+    <link href="/RFP-iOS-SDK/css/hugo-theme.css?1628045915" rel="stylesheet">
     
-      <link href="/RFP-iOS-SDK/css/theme-blue.css?1613534711" rel="stylesheet">
+      <link href="/RFP-iOS-SDK/css/theme-blue.css?1628045915" rel="stylesheet">
     
 
-    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1613534711"></script>
+    <script src="/RFP-iOS-SDK/js/jquery-2.x.min.js?1628045915"></script>
     
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{ 
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fa fa-close"></i></span>
 </div>
 
-<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1613534711"></script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1613534711"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/lunr.min.js?1628045915"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/auto-complete.js?1628045915"></script>
 <script type="text/javascript">
     
         var baseurl = "\/RFP-iOS-SDK\/en";
     
 </script>
-<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1613534711"></script>
+<script type="text/javascript" src="/RFP-iOS-SDK/js/search.js?1628045915"></script>
 
     
   </div>
@@ -476,6 +476,7 @@
 <li>
 <ul>
 <li><a href="#loading-customized-in-feed-advertisements">Loading customized In-Feed advertisements</a></li>
+<li><a href="#custom-parameters">Custom parameters</a></li>
 <li><a href="#displaying-customized-in-feed-advertisements">Displaying customized In-Feed advertisements</a></li>
 <li><a href="#notifying-impressions-of-customized-in-feed-advertisements">Notifying impressions of customized In-Feed advertisements</a></li>
 <li><a href="#processing-transitions-when-clicking-customized-in-feed-advertisements">Processing transitions when clicking customized In-Feed advertisements</a></li>
@@ -510,6 +511,7 @@
 
 <ul>
 <li><a href="#infeed/custom/load">Loading customized In-Feed advertisements</a></li>
+<li><a href="#infeed/custom/customparams">Custom parameters</a></li>
 <li><a href="#infeed/custom/display">Displaying customized In-Feed advertisements</a></li>
 <li><a href="#infeed/custom/imp">Notifying impressions of customized In-Feed advertisements</a></li>
 <li><a href="#infeed/custom/click">Transition processing when clicking customized In-Feed advertisements</a></li>
@@ -571,6 +573,23 @@
         tableView.realoadData();
     }
 }
+</code></pre>
+
+<p><a name="infeed/custom/customparams"></a></p>
+
+<h3 id="custom-parameters">Custom parameters</h3>
+
+<p>You can specify custom parameters when loading in-feed ads.</p>
+
+<pre><code class="language-:swift">// Call In-Feed advertising loading
+instreamAdLoader.rfpLoadAd(
+    withReturn: adSpotId,
+    adCount: UInt(positions.count),
+    positions: positions,
+    customs: [&quot;a&quot;: &quot;1&quot;, &quot;b&quot;: [&quot;2&quot;, &quot;3&quot;]]
+)
+
+// custom[a]=1&amp;custom[b]=2&amp;custom[b]=3
 </code></pre>
 
 <p><a name="infeed/custom/display"></a></p>
@@ -1123,20 +1142,20 @@ Please ensure that advertisements can be recognized in both modes.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1613534711"></script>
+    <script src="/RFP-iOS-SDK/js/clipboard.min.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.min.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/perfect-scrollbar.jquery.min.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/jquery.sticky.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/featherlight.min.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/html5shiv-printshiv.min.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/highlight.pack.js?1628045915"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/learn.js?1613534711"></script>
-    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1613534711"></script>
+    <script src="/RFP-iOS-SDK/js/modernizr.custom.71422.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/learn.js?1628045915"></script>
+    <script src="/RFP-iOS-SDK/js/hugo-learn.js?1628045915"></script>
 
-    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1613534711" type="text/css" rel="stylesheet" />
-    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1613534711"></script>
+    <link href="/RFP-iOS-SDK/mermaid/mermaid.css?1628045915" type="text/css" rel="stylesheet" />
+    <script src="/RFP-iOS-SDK/mermaid/mermaid.js?1628045915"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

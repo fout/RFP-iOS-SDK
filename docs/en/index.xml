@@ -42,7 +42,7 @@ For other uses, use Customized In-Feed advertisements.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://fout.github.io/RFP-iOS-SDK/en/programming-guide/2_4/</guid>
-      <description>Loading customized In-Feed advertisements Displaying customized In-Feed advertisements Notifying impressions of customized In-Feed advertisements Transition processing when clicking customized In-Feed advertisements Acquiring display characters for customized In-Feed advertisement button Loading customized In-Feed advertisements and acquiring events at the time of each notification Customized In-Feed advertisement parameters Arbitrary use of advertisement formats provided as default by SDK Acquiring exceptions occurring within SDK About Dark Mode  When you want to display with more flexibility than with simple In-Feed advertisements, you can use customized In-Feed advertisement functions.</description>
+      <description>Loading customized In-Feed advertisements Custom parameters Displaying customized In-Feed advertisements Notifying impressions of customized In-Feed advertisements Transition processing when clicking customized In-Feed advertisements Acquiring display characters for customized In-Feed advertisement button Loading customized In-Feed advertisements and acquiring events at the time of each notification Customized In-Feed advertisement parameters Arbitrary use of advertisement formats provided as default by SDK Acquiring exceptions occurring within SDK About Dark Mode  When you want to display with more flexibility than with simple In-Feed advertisements, you can use customized In-Feed advertisement functions.</description>
     </item>
     
     <item>

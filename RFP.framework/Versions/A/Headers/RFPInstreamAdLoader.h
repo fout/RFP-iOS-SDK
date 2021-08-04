@@ -46,7 +46,7 @@
 
  @see RFPExceptionDelegate.h
  */
-@property(nonatomic, weak) id<RFPExceptionDelegate> exceptionDelegate;
+@property(nonatomic, weak) id <RFPExceptionDelegate> exceptionDelegate;
 
 /**
  binds this loader to your table view.
@@ -87,6 +87,18 @@
  */
 
 - (void)rfpLoadAdWithReturn:(NSString *)adSpotId adCount:(NSUInteger)adCount positions:(NSArray *)positions;
+
+/**
+ starts loading advertisements for receiving advertisement informations,
+ if you want to do so.
+ @param adSpotId  adSpotId to be registered in advance
+ @param adCount   advertisement information count to be received in the callback. If 0 is given, registered is selected.
+ @param positions each position to be added into `RFPInstreamInfoModel` in order to control ad position. If nil is given, registered is selected.
+ @param custom custom parameters
+
+ ex. [self.instreamAdLoader loadAdWithReturn:6 adCount:5 positions:@[@3,@6,@9,@12,@15] data:@{@"key": @"val1", @"key": @"val2"}];
+ */
+- (void)rfpLoadAdWithReturn:(NSString *)adSpotId adCount:(NSUInteger)adCount positions:(NSArray *)positions customs:(NSDictionary *)customParams;
 
 /**
  send an impression record to log advertising performance.

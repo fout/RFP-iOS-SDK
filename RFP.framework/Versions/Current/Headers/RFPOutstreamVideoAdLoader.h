@@ -18,4 +18,6 @@
 
 - (void)loadAdWithAdspotID:(NSString *)adSpotId frame:(CGRect)frame;
 
+- (void)loadAdWithAdspotID:(NSString *)adSpotId frame:(CGRect)frame customs:(NSDictionary *)customParams;
+
 @end
